@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import styled from "styled-components";
 
@@ -47,7 +47,7 @@ export default function About() {
                 
                 <div className="java">
                   <div className="line">
-                    <div style={{ width: `${i.perc}%` }} className="bar"></div>3
+                    <div style={{ width: `${i.perc}%`}} className="bar"></div>3
                   </div>
                   <p>{i.perc}%</p>
                 </div>
@@ -70,6 +70,8 @@ const AWrapper = styled.section`
   display: flex;
   justify-content: center;
   background-color: #161716;
+
+ 
 
   h2 {
     color: white;
@@ -125,21 +127,25 @@ const AWrapper = styled.section`
     align-items: center;
 
     .line {
-      height: 5px;
+      height: 10px;
       width: 100%;
       overflow: hidden;
       background-color: white;
       border-radius: 5px;
+      /* border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; */
       display: flex;
       justify-content: flex-start;
       align-items: center;
 
       .bar {
-        height: 5px;
+        height: 100%;
 
         background-color: ${({theme}) => theme.color.btbg};
+        
 
-        /* border-radius: 5px; */
+        border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
         /* transition: width 5s ease ; */
       }
     }
