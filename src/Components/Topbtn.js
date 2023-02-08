@@ -50,6 +50,7 @@ const Wrapper = styled.section`
     position: fixed;
     right: 1rem;
     bottom: 1rem;
+    z-index: 99;
     h1{
         color: white;
     }

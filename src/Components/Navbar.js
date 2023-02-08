@@ -40,7 +40,7 @@ import darksvg from '../Assests/dark.svg'
 }
 
 const Mainheader = styled.header`
-width: 90vw;
+width: 100vw;
 max-width: 1200px;
 min-height: 70px;
 max-height: fit-content;

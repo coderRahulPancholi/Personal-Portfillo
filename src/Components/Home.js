@@ -5,6 +5,8 @@ import About from './About';
 import Myskills from './Myskills';
 
 
+
+
 function Home(props) {
 
   // const data = {
@@ -14,11 +16,14 @@ function Home(props) {
   // }
   return (
     <>
+
+
   <Section/>
-  <About />
   <Myskills/>
+  {/* <About /> */}
 
 
+   
     </>
    
     

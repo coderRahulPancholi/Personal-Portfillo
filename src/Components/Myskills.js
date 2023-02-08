@@ -6,19 +6,19 @@ export default function About() {
   const skills = [
     {
       title: "Java",
-      perc: 40,
+      perc: 55,
     },
     {
       title: "Html",
-      perc: 90,
+      perc: 99,
     },
     {
       title: "Css",
-      perc: 90,
+      perc: 95,
     },
     {
       title: "ReactJs",
-      perc: 60,
+      perc: 70,
     },
     {
       title: "NodeJs",
@@ -34,7 +34,7 @@ export default function About() {
     <AWrapper>
       <div className="maincont">
         <div className="title">
-          <h3>My Skills </h3>
+          <h3>Skills </h3>
           <p>Here's Some details about my skills with their percenteges</p>
         </div>
 
@@ -88,9 +88,11 @@ const AWrapper = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    
   }
   .skills {
     width: 100%;
+    padding: 5% 0;
   }
 
   .skcnt {
@@ -107,7 +109,7 @@ const AWrapper = styled.section`
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    background-color: #181a18;
+    background-color: #252625;
     border-radius: 10px;
     padding: 10px;
     justify-content: center;

@@ -1,19 +1,20 @@
 // import logo from './logo.svg';
 
 import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import About from './Components/About';
-import Myskills from './Components/Myskills';
+// import About from './Components/About';
+// import Myskills from './Components/Myskills';
 import  {ThemeProvider} from "styled-components"
 import { GlobalStyle } from './Gobalstyle';
-import Contact from './Components/Contact';
+// import Contact from './Components/Contact';
 import Topbtn from './Components/Topbtn';
+import Projects from './Components/Projes';
 
 function App() {
 
@@ -40,16 +41,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-    <BrowserRouter>
+    
     <Navbar title ="Rahul Sharma"/>
-    <Routes>
-     <Route path='/' element={<Home title="Welcome" name="Rahul Sharma" btntext="Download CV"/>}/>
-     <Route path='/myskills' element={<Myskills />}/>
-     <Route path='/about' element={<About />}/>
-     <Route path='/contact' element={<Contact/>}/>
-    </Routes>
-    </BrowserRouter>
+    <Home/>
+    <Projects/>
+    
     <Topbtn/>
+
    
     </ThemeProvider>
   

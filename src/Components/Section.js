@@ -73,9 +73,10 @@ align-items: center;
 
 h1{
     width: 100%;
-    height: auto;
+    
     color: white;
     font-weight: 100;
+
 }
 a{
     text-decoration: none;
@@ -88,7 +89,7 @@ p{
     
 }
 .surname{
-    /* width: 100%; */
+    /* width: 100%;  */
     color:${({theme}) => theme.color.btbg};
     
 }
