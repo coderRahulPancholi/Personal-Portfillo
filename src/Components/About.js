@@ -1,157 +1,119 @@
-import React, { useState } from "react";
-import { Project_Data } from "../Data/Projects";
+import React  from "react";
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
+
 
 function About() {
-  const [prev, setPrev] = useState([]);
-  const [pvmode, setPvmode] = useState(false);
-
-  const preview = (id) => {
-    const pd = Project_Data.find((i, ind) => {
-      return id === ind;
-    });
-    setPrev(pd);
-    setPvmode(true);
-  };
+  
+  
 
   return (
     <AWrapper>
-      <div className="maincont">
-        <div className="title">
-          <h3>Projects </h3>
+       <div className="title">
+          <h3>About Me </h3>
         </div>
-
-        <div className="projects">
-          <Swiper
-            // slidesPerView={"2"}
-
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: true,
-            }}
-            loop={true}
-            navigation={true}
-            pagination={{
-              dynamicBullets: true,
-            }}
-            modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            {Project_Data.map((i, ind) => {
-              return (
-                <SwiperSlide
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%",
-                    height: "auto",
-                  }}
-                >
-                  <Project key={ind} onClick={() => preview(ind)}>
-                    <button>{i.title}</button>
-                  </Project>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </div>
-
-      <div style={{ display: pvmode ? "flex" : "none" }} className="pf">
-        <div>
-          <img src={prev.img} alt="" />
-          <div
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              justifyContent: "space-around",
-            }}
-          >
-            <h1>{prev.title}</h1>
-            <button onClick={() => setPvmode(false)}>close</button>
+        <div className="maincont">
+          <div className="aboutme">
+            <h4 style={{fontSize:"20px"}}>Personal Details</h4>
+            <ul style={{padding:"10px",fontSize:"15px"}}>
+            <li><b>Name:-</b>Rahul Sharma</li>
+            <li><b>Adress:-</b>Bad ke balaji</li>
+            <li><b>Phone:-</b><a href="tel:+91-9358393743" rel="noreferrer" target={"_blank"}>9358393743</a></li>
+            <li><b>Email:-</b><a href="https://mail.google.com/mail/u/0/?fs=1&to=rahulpancholi3937@gmail.com&tf=cm" rel="noreferrer" target={"_blank"}>rahulpancholi3937 @gmail.com</a></li>
+            </ul>
           </div>
+          
+          <div className="aboutme">
+            <h4 style={{fontSize:"20px"}}>SelfIntroduction</h4>
+            <ul style={{padding:"10px",fontSize:"15px"}}>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, sapiente quasi aliquam, magnam vitae doloremque itaque saepe, maiores ut adipisci sint delectus. Dignissimos officia quod alias impedit fugiat temporibus saepe?</p>
+            
+            </ul>
+          </div>
+          <div className="aboutme">
+            <h4 style={{fontSize:"20px"}}>Qualifitions</h4>
+            <ul style={{padding:"10px",fontSize:"15px"}}>
+            <li><b>Highest:-</b>Rahul Sharma</li>
+            <li><b>Adress:-</b>Bad ke balaji</li>
+            
+            </ul>
+          </div>
+          <div className="aboutme">
+            <h4 style={{fontSize:"20px"}}>Languages</h4>
+            <ul style={{padding:"10px",fontSize:"15px"}}>
+            <li><b>Highest:-</b>Rahul Sharma</li>
+            <li><b>Adress:-</b>Bad ke balaji</li>
+            
+            </ul>
+          </div>
+
+
         </div>
-      </div>
+
+    
     </AWrapper>
   );
 }
 
 const AWrapper = styled.section`
+/* height: 100vh; */
+width: 100vw;
+padding: 2%;
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+background-color: #161716;
+
+.maincont{
+  width: 90%;
+  /* max-width: 900px; */
   display: flex;
-  justify-content: center;
-  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+  
 
-  /* height: calc(100vh - 100px); */
 
-  .pf {
-    position: fixed;
-    top: 0;
+  .aboutme{
     width: 100%;
-    height: 100%;
-    background-color: azure;
-    z-index: 999;
-    justify-content: center;
-    /* flex-direction: column; */
+    max-width: 400px;
+    border-left: 3px solid #2854b0;
+    
+    
+    background-color: #252625;
+    border-radius: 10px;
+  
+    padding: 5px;
+   
 
-    div {
-      width: 90%;
-      max-width: 700px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    img {
-      border: 1px solid black;
-      border-radius: 1%;
-      width: 90%;
-      max-width: 700px;
-      height: 35%;
-      max-height: 500px;
-    }
-  }
-  p {
-    color: white;
-  }
-
-  .maincont {
-    width: 90%;
-    height: 100%;
+  
+  ul{
     display: flex;
     flex-direction: column;
-    padding: 5px;
-  }
-  .title {
-    width: 100%;
-  }
-  .projects {
-    min-width: 100%;
-    display: flex;
-    height: auto;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-    padding: 5% 0;
-    border-radius: 10px;
+  
+    
   }
-`;
+  ul li{
+   
+    width: fit-content;
+    height: fit-content;
+  }
+  ul li a{
+    text-decoration: underline;
 
-const Project = styled.div`
-  width: 100%;
-  height: 400px;
-  display: flex;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-`;
+    color: white;
+
+   
+  }
+}
+
+
+}
+
+
+`
+  
 
 export default About;

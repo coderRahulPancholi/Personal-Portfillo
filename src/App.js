@@ -15,6 +15,8 @@ import { GlobalStyle } from './Gobalstyle';
 // import Contact from './Components/Contact';
 import Topbtn from './Components/Topbtn';
 import Projects from './Components/Projes';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 function App() {
 
@@ -45,6 +47,8 @@ function App() {
     <Navbar title ="Rahul Sharma"/>
     <Home/>
     <Projects/>
+    <About/>
+    <Contact/>
     
     <Topbtn/>
 

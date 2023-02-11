@@ -19,7 +19,7 @@ function Section() {
 
            
             <p className='toppara'>Welcome I'm</p>
-            <h1 className='myname'>Rahul<b className='surname'>Sharma</b></h1>
+            <h1 className='myname'>Rahul<b className='surname'> Sharma</b></h1>
             <p className='mydata'>A fornted devopler currently i am learning react js.
             </p>
             <p className='mydata'>
