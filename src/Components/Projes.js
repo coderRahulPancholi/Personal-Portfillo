@@ -12,8 +12,8 @@ export default function Projes() {
           <p>I have created some cool website using my skills.Here some website with their preview links</p>
         </div>
         <Items className="dfas">
-          {Project_Data.map((i) => {
-            return <Item>
+          {Project_Data.map((i,ind) => {
+            return <Item key={ind}>
               <div className="img">
                 <img src={i.img} alt="" />
                 

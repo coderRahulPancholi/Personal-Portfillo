@@ -40,9 +40,9 @@ export default function About() {
 
         <div className="skills">
           <div className="skcnt">
-            {skills.map((i) => {
+            {skills.map((i,ind) => {
               return (
-                <div className="allskilss">
+                <div className="allskilss" key={ind}>
 
                 
                 <div className="java">
