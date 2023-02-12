@@ -23,7 +23,7 @@ function About() {
           </div>
           
           <div className="aboutme">
-            <h4 style={{fontSize:"20px"}}>SelfIntroduction</h4>
+            <h4 style={{fontSize:"20px"}}>Self Introduction</h4>
             <ul style={{padding:"10px",fontSize:"15px"}}>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, sapiente quasi aliquam, magnam vitae doloremque itaque saepe, maiores ut adipisci sint delectus. Dignissimos officia quod alias impedit fugiat temporibus saepe?</p>
             
