@@ -17,6 +17,7 @@ import Topbtn from './Components/Topbtn';
 import Projects from './Components/Projes';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
     <Projects/>
     <About/>
     <Contact/>
+    <Footer/>
     
     <Topbtn/>
 

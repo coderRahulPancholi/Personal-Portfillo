@@ -140,7 +140,7 @@ function Contact() {
           <div className="buttons">
 
               <button onClick={mailsend} className="mail"><img src={Ms} alt="" />Mail Me </button>
-              <button onClick={whatsappsend} className="whatsapp"><img src={Ws} alt="" /> WhatsApp </button>
+              <button onClick={whatsappsend} className="whatsapp"><img src={Ws} alt="" /> WhatsApp</button>
              
             
 
@@ -273,13 +273,7 @@ const Wrapper = styled.div`
             background-color: #2d2e2d;
         }
       }
-      /* .mail{
-        background-color: #e8413a;
-      }
-      .whatsapp{
-        background-color:#1ec149;
-
-      } */
+     
 
 
 
