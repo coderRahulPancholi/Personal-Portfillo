@@ -20,8 +20,6 @@ background-color: #161716;
 display: flex;
 justify-content: center;
 align-items: center;
-
-
-
+text-align: center;
 
 `
