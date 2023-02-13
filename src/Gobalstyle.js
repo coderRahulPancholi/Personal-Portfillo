@@ -7,17 +7,14 @@ export const GlobalStyle= createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inconsolata', monospace;
-    
-    
+    /* font-family: 'Inconsolata', monospace; */
+    font-family: 'Open Sans', sans-serif;
 
-
-    
-    
+   
 }
 body{
     background-color: #181a18;
-    color:${({theme}) => theme.color.white};
+    color:${({theme}) => theme.color.white}; 
 }
 
 html{
@@ -31,6 +28,7 @@ h1{
     font-weight: 900;
    color:${({theme}) => theme.color.heading};
    /* text-align: center; */
+
 }
 h2{
     font-size: 4.4rem;
@@ -59,6 +57,8 @@ h3{
 }
 p{
     font-size: 1.5rem;
+    
+    
 
 }
 
@@ -76,10 +76,6 @@ background-color:${({theme}) => theme.color.btbg};
 border: 1px solid transparent;
 outline: none;
 color:${({theme}) => theme.color.white};
-
-
-
-
 border-radius: 0.5rem;
     padding: 1rem;
     font-size: 1.5rem;

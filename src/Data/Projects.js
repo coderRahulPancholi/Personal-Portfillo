@@ -1,11 +1,13 @@
-import youtubeimg from "../Assests/youtube.png"
+import portfillo from "../Assests/youtube.png"
 export const Project_Data = [
     
     {
         title:"Portfillo",
-        img:youtubeimg,
+        img:portfillo,
         technologyuse:"ReactJs,Html,Css",
         discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"",
+        code:""
         
         
 

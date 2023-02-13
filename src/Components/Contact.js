@@ -233,7 +233,7 @@ const Wrapper = styled.div`
         color: white;
       }
       textarea {
-        min-height: 100px;
+        min-height: 100px;  
         max-width: 100%;
         min-width: 100%;
         padding: 15px;
@@ -243,6 +243,10 @@ const Wrapper = styled.div`
         /* background-color:#161716 ; */
         background-color: #252625;
         color: white;
+
+        &::-webkit-scrollbar{
+          display: none;
+        }
       }
 
 

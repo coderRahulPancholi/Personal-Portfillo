@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Project_Data } from "../Data/Projects";
 
+
 export default function Projes() {
   return (
     <Wrapper>
@@ -28,8 +29,9 @@ export default function Projes() {
                 </div>
 
               <div className="btns">
-                <button>Live Preview</button>
-                <button>Source Code</button>
+                <button onClick={()=>{window.open(i.link,"_blank")}}>Live Preview</button>
+                <button onClick={()=>{window.open(i.code,"_blank")}}>Source Code</button>
+                
               </div>
               </div>
 
@@ -129,14 +131,19 @@ const Item = styled.div`
 
 
       button{
+        background-color:${({theme}) => theme.color.btbg};
         cursor: pointer;
         padding: 10px;
         margin: 5px;
         border:none;
         border-radius: 5px;
-        background-color:royalblue;
+        
         color: white;
         font-weight: bold;
+
+        &:hover{
+          background-color: #4969ad;
+        }
       }
     
 
