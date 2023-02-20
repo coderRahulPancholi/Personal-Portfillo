@@ -12,15 +12,15 @@ export default function Projes() {
           <h3>Projects </h3>
           <p>I have created some cool website using my skills.Here some website with their preview links</p>
         </div>
-        <Items className="dfas">
+        <Items className="dfc jc ac gap15">
           {Project_Data.map((i,ind) => {
-            return <Item key={ind}>
+            return <Item key={ind} className="df jsa as wrap gap10">
               <div className="img">
                 <img src={i.img} alt="" />
                 
 
               </div>
-              <div className="info">
+              <div className="info dfc jss ac gap15">
                 <h3>{i.title}</h3>
                 <div className="dis">
 
@@ -45,16 +45,11 @@ export default function Projes() {
 }
 
 const Wrapper = styled.div`
+min-height: 70vh; 
   width: 100vw;
   padding: 1%;
 
-  .dfas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
+ 
   .title{
     /* padding: 10px; */
     margin-bottom: 50px;
@@ -71,12 +66,7 @@ const Item = styled.div`
   width: 90%;
   max-width: 1000px;
   height:auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
   border-radius: 10px;
-  gap: 10px;
   background-color: #2e3033;
   padding: 1%;
   
@@ -103,12 +93,6 @@ const Item = styled.div`
     flex: 1;
     flex-basis: 400px;
     height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
     
 
     h3{

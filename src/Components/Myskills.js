@@ -66,6 +66,7 @@ export default function About() {
 }
 
 const AWrapper = styled.section`
+min-height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;

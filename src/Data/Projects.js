@@ -1,4 +1,9 @@
 import portfillo from "../Assests/youtube.png"
+import yt from "../Assests/youtubeapp.jpg"
+import text from "../Assests/texter.jpg"
+import todolist from "../Assests/todolist.jpg"
+import weatherapp from "../Assests/weatherapp.jpg"
+import pixelg from "../Assests/pixelgallery.jpg"
 export const Project_Data = [
     
     {
@@ -13,20 +18,48 @@ export const Project_Data = [
 
     },
     {
+        title:"Youtube Clone",
+        img:yt,
+        technologyuse:"ReactJs,Html,Css",
+        discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"https://youtubeclonebyrahul.netlify.app/",
+        code:""
+        
+        
+
+    },
+    {
         title:"Text Utilites",
-        img:"https://pixlr.com/images/index/remove-bg.webp"
+        img:text,
+        technologyuse:"ReactJs,Html,Css",
+        discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"https://rahulo7.github.io/Texter/",
+        code:""
     },
     {
         title:"Pixel Gallery",
-        img:"https://pixlr.com/images/index/remove-bg.webp"
+        img:pixelg,
+        technologyuse:"ReactJs,Html,Css",
+        discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"https://imagegallerybyrahul.netlify.app/",
+        code:""
     },
     {
         title:"Weather app",
-        img:"https://pixlr.com/images/index/remove-bg.webp"
+        img:weatherapp,
+        technologyuse:"ReactJs,Html,Css",
+        discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"https://weatherappbyrahul.netlify.app/",
+        code:""
     },
     {
-        title:"Employe Search",
-        img:"https://pixlr.com/images/index/remove-bg.webp"
+        title:"Todo List",
+        img:todolist,
+        technologyuse:"ReactJs,Html,Css",
+        discription:"This is a personal profile Website. Use for Self Introduction",
+        link:"https://todolistbyrs.netlify.app/",
+        code:""
     },
+   
    
 ]

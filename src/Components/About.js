@@ -1,5 +1,6 @@
 import React  from "react";
 import styled from "styled-components";
+import pimg from "../Assests/pimg.jpg"
 
 
 function About() {
@@ -11,7 +12,11 @@ function About() {
        <div className="title">
           <h3>About Me </h3>
         </div>
+        <div className="profilep">
+          <img src={pimg} alt="" />
+        </div>
         <div className="maincont">
+         
           <div className="aboutme">
             <h4 style={{fontSize:"20px"}}>Personal Details</h4>
             <ul style={{padding:"10px",fontSize:"15px"}}>
@@ -37,7 +42,7 @@ function About() {
             
             </ul>
           </div>
-          <div className="aboutme">
+          <div className="aboutme"  >
             <h4 style={{fontSize:"20px"}}>Languages</h4>
             <ul style={{padding:"10px",fontSize:"15px"}}>
             <li><b>Highest:-</b>Rahul Sharma</li>
@@ -55,14 +60,29 @@ function About() {
 }
 
 const AWrapper = styled.section`
-/* height: 100vh; */
+min-height: 70vh;
 width: 100vw;
 padding: 2%;
 display: flex;
 flex-direction: column;
 gap: 20px;
 align-items: center;
+/* justify-content: ; */
 background-color: #161716;
+
+.profilep{
+  width: 90%;
+  max-width: 300px;
+  
+  height: 300px;
+ border-radius: 100%;
+  overflow: hidden;
+  img{
+    width: 100%;
+  height: 100%;
+  }
+
+}
 
 .maincont{
   width: 90%;
@@ -70,6 +90,7 @@ background-color: #161716;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  /* align-items: center; */
   justify-content: space-around;
  
   
@@ -79,6 +100,7 @@ background-color: #161716;
     width: 100%;
     max-width: 400px;
     border-left: 3px solid #2854b0;
+    overflow-x: hidden;
     
     
     background-color: #252625;

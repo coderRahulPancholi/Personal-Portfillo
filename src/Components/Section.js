@@ -12,9 +12,9 @@ function Section() {
  
 
   return (
-  <Wrapper>
+  <Wrapper className='df ac'>
     
-        <div className="section-data">
+        <div className="section-data df jc">
             <div>
 
            
@@ -43,17 +43,16 @@ const Wrapper = styled.section`
 width: 100%;
 /* height: 70%; */
 height: calc(100vh - 70px);
-display: flex;
-align-items: center;
+
+
 
 
 
 
 .section-data{
     width: 100%;
-    display: flex;
-    justify-content: center;
     animation: loadani 1s ease  1  ;
+   
    
     
  
@@ -96,21 +95,21 @@ p{
     
 }
 
-
 @keyframes loadani {
     from{
-        /* transform: translateY(75px); */
-        transform: scale(1.3);
+        transform: translateY(75px);
+        /* transform: scale(1.3); */
         opacity: 10%;
     }
     
     to{
-        /* transform: translateY(0px); */
-        transform: scale(1.0);
+        transform: translateY(0px);
+        /* transform: scale(1.0); */
         opacity: 100%;
     }
     
 }
+
 
 }
 

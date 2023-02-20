@@ -8,8 +8,8 @@ import In from '../Assests/Insta.svg'
 
 export default function Footer() {
   return (
-    <Footr>
-      <div className="social">
+    <Footr className='dfc jsb ac'>
+      <div className="social dfjac">
         <div className="icons" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
             <img src={Wh} alt="" />
         </div>
@@ -39,19 +39,18 @@ const Footr =styled.div`
 width: 100vw;
 /* padding: 15px; */
 background-color: #161716;
-display: flex;
+/* display: flex;
 flex-direction: column;
-
 justify-content: space-between;
-align-items: center;
+align-items: center; */
 text-align: center;
 
 .social{
     width: 100%;
     padding: 15px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 
     .icons{
         opacity: 50%;

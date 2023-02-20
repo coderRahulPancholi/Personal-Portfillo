@@ -13,109 +13,108 @@ function Contact() {
   const [Message, setMessage] = useState("");
   const [validation, setValidation] = useState(false);
 
+  const whatsappsend = () => {
+    let url =
+      "https://api.whatsapp.com/send?phone=919358393743" +
+      "&text=" +
+      "Name: " +
+      name +
+      "%0a" +
+      "Email: " +
+      email +
+      "%0a" +
+      "Contact Number: " +
+      number +
+      "%0a" +
+      "Massege : " +
+      Message +
+      "%0a";
 
-  const whatsappsend=()=>{
-    let url = 
-    "https://api.whatsapp.com/send?phone=919358393743" +
-    "&text=" +
-    "Name: " +
-    name +
-    "%0a" +
-    "Email: " +
-    email +
-    "%0a" +
-    "Contact Number: " +
-    number +
-    "%0a" +
-    "Massege : " +
-    Message +
-    "%0a";
-   
-    if(name.length>1 && email.length>5 && number.length === 10 && Message.length >10){
-        window.open(url,"_blank")
-        setName("")
-        setNumber("")
-        setEmail("")
-        setMessage("")
+    if (
+      name.length > 1 &&
+      email.length > 5 &&
+      number.length === 10 &&
+      Message.length > 10
+    ) {
+      window.open(url, "_blank");
+      setName("");
+      setNumber("");
+      setEmail("");
+      setMessage("");
+    } else {
+      setValidation(true);
+      // alert("enter data")
     }
-    else{
-        setValidation(true)
-        // alert("enter data")
+    setTimeout(() => {
+      setValidation(false);
+    }, 5000);
+  };
+  const mailsend = () => {
+    let mailurl =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=rahulpancholi3937@gmail.com&su=NewQuery" +
+      "&body=" +
+      "Name: " +
+      name +
+      "%0a" +
+      "Email: " +
+      email +
+      "%0a" +
+      "Contact Number: " +
+      number +
+      "%0a" +
+      "Massege : " +
+      Message +
+      "%0a";
+
+    if (
+      name.length > 1 &&
+      email.length > 5 &&
+      number.length === 10 &&
+      Message.length > 10
+    ) {
+      window.open(mailurl, "_blank");
+      setName("");
+      setNumber("");
+      setEmail("");
+      setMessage("");
+    } else {
+      setValidation(true);
+      // alert("enter data")
     }
-    setTimeout(()=>{
-        setValidation(false)
-    },5000)
-
-  }
-  const mailsend=()=>{
-    let mailurl = 
-    "https://mail.google.com/mail/?view=cm&fs=1&to=rahulpancholi3937@gmail.com&su=NewQuery"+
-    "&body="+
-    "Name: " +
-    name +
-    "%0a" +
-    "Email: " +
-    email +
-    "%0a" +
-    "Contact Number: " +
-    number +
-    "%0a" +
-    "Massege : " +
-    Message +
-    "%0a";
-   
-    if(name.length>1 && email.length>5 && number.length === 10 && Message.length >10){
-        window.open(mailurl,"_blank")
-        setName("")
-        setNumber("")
-        setEmail("")
-        setMessage("")
-
-    }
-    else{
-        setValidation(true)
-        // alert("enter data")
-    }
-    setTimeout(()=>{
-        setValidation(false)
-    },5000)
-
-  }
-
-  
+    setTimeout(() => {
+      setValidation(false);
+    }, 5000);
+  };
 
   return (
-    <Wrapper>
+    <Wrapper className="dfc ac gap20">
       <div className="title">
         <h3>Contact Me </h3>
         <p>Feel Free to Contact me </p>
       </div>
-      <div className="maincont">
-        <div className="contactdiv numwsp">
-        <div className="contlogo">
+      <div className="maincont dfc ac">
+        <div className="contactdiv numwsp df ac jsa wrap gap15">
+          <div className="contlogo dfc ac jsc" onClick={()=>{window.open("tel:+91-9358393743","_blank")}}>
             <img src={P} alt="" />
             <p>Call Me</p>
-        </div>
-        <div className="contlogo">
+          </div>
+          <div className="contlogo dfc ac jsc" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
             <img src={W} alt="" />
             <p>Chat With Me</p>
-        </div>
-        <div className="contlogo">
+          </div>
+          <div className="contlogo dfc ac jsc" onClick={()=>{window.open("https://mail.google.com/mail/u/0/?fs=1&to=rahulpancholi3937@gmail.com&tf=cm","_blank")}}>
             <img src={M} alt="" />
             <p>Mail me</p>
+          </div>
         </div>
-          
-        
-        </div>
-        <div className="formdiv">
-          <div className="form">
+        <div className="formdiv dfc jsc ac gap15">
+          <div className="form dfc ac gap15">
             <p>Get In Touch</p>
             <input
               type="text"
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value.toUpperCase())}
-             
             />
             <input
               type="text"
@@ -136,14 +135,25 @@ function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-          <div className="error" style={{display:validation?"flex":"none",color:"red",fontSize:"15px",textAlign:"center"}}>Please Enter A vaild data to send Response </div>
-          <div className="buttons">
-
-              <button onClick={mailsend} className="mail"><img src={Ms} alt="" />Mail Me </button>
-              <button onClick={whatsappsend} className="whatsapp"><img src={Ws} alt="" /> WhatsApp</button>
-             
-            
-
+          <div
+            className="error"
+            style={{
+              display: validation ? "flex" : "none",
+              color: "red",
+              fontSize: "15px",
+              textAlign: "center",
+            }}
+          >
+            Please Enter A vaild data to send Response{" "}
+          </div>
+          <div className="buttons dfjac gap15 wrap">
+            <button onClick={mailsend} className="mail df ac jsb">
+              <img src={Ms} alt="" />
+              Mail Me{" "}
+            </button>
+            <button onClick={whatsappsend} className="whatsapp df ac jsb">
+              <img src={Ws} alt="" /> WhatsApp
+            </button>
           </div>
         </div>
       </div>
@@ -153,10 +163,8 @@ function Contact() {
 const Wrapper = styled.div`
   width: 100vw;
   padding: 2%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  min-height: 70vh;
+
   /* background-color: #161716; */
   /* background-color: #161716; */
 
@@ -172,55 +180,28 @@ const Wrapper = styled.div`
 
   .maincont {
     width: 90%;
-    /* max-width: 900px; */
-    display: flex;
-    flex-direction: column;
     gap: 40px;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    align-items: center;
 
     .contlogo {
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       cursor: pointer;
       text-align: center;
-      
     }
     .numwsp {
       width: 100%;
       max-width: 500px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      align-items: center;
-      justify-content: space-around;
     }
 
     .formdiv {
       width: 100%;
       max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      justify-content: center;
-      align-items: center;
       border-radius: 15px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
       padding: 20px;
-      
     }
 
     .form {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
 
       input {
         width: 100%;
@@ -233,7 +214,7 @@ const Wrapper = styled.div`
         color: white;
       }
       textarea {
-        min-height: 100px;  
+        min-height: 100px;
         max-width: 100%;
         min-width: 100%;
         padding: 15px;
@@ -244,45 +225,27 @@ const Wrapper = styled.div`
         background-color: #252625;
         color: white;
 
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
           display: none;
         }
       }
-
-
     }
-    .buttons{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+    .buttons {
+      width: 100%;
 
-
-      button{
+      button {
         cursor: pointer;
         padding: 10px;
-        
-        border:none;
+        border: none;
         border-radius: 10px;
-        display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #252625;
+        background-color: #252625;
         color: white;
         font-weight: bold;
-        
-       
-        &:hover{
-            background-color: #2d2e2d;
+
+        &:hover {
+          background-color: #2d2e2d;
         }
       }
-     
-
-
-
-
     }
   }
 `;

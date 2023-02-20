@@ -81,19 +81,53 @@ border-radius: 0.5rem;
     font-size: 1.5rem;
     width: 10rem;
 }
-
+.dfjac{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.df{
+    display: flex;
+    flex-direction: row;
+}
+.dfc{
+    display: flex;
+    flex-direction: column;
+}
+.jc{
+    justify-content: center;
+}
+.jss{
+    justify-content: flex-start;
+}
+.jsa{
+    justify-content: space-around;
+}
+.jsb{
+    justify-content: space-between;
+}
+.ac{
+    align-items: center;
+}
+.as{
+    align-items: flex-start;
+}
+.gap15{
+    gap: 15px;
+}
+.gap10{
+    gap: 10px;
+}
+.gap20{
+    gap: 20px;
+}
+.wrap{
+    flex-wrap: wrap;
+}
 .container{
     max-width:120rem ;
     margin: 0 auto;
     min-height: 70vh;
-}
-.grid{
-    display: grid;
-    gap:9rem;
-
-}
-.grid-two-column{
-    grid-template-columns: repeat(2,1fr);
 }
 
 
