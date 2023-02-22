@@ -38,7 +38,7 @@ export default function Footer() {
 const Footr =styled.div`
 width: 100vw;
 /* padding: 15px; */
-background-color: #161716;
+background-color: ${({theme}) => theme.color.bg2};
 /* display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -64,6 +64,6 @@ text-align: center;
 .copyrights{
     padding: 7px;
     width: 100%;
-    background-color: black;
+    
 }
 `

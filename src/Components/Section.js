@@ -26,7 +26,7 @@ function Section() {
             I have created some beautifull website using it go trough my projects section to see it.
 
             </p>
-            <button className='btn hire-btn'>Hire Me</button>
+            <button className='btn hire-btn btn-text'>Hire Me</button>
             </div>
         </div>
       
@@ -43,6 +43,7 @@ const Wrapper = styled.section`
 width: 100%;
 /* height: 70%; */
 height: calc(100vh - 70px);
+background-color: ${({theme}) => theme.color.bg1};
 
 
 
@@ -51,7 +52,7 @@ height: calc(100vh - 70px);
 
 .section-data{
     width: 100%;
-    animation: loadani 1s ease  1  ;
+    /* animation: loadani 1s ease  1  ; */
    
    
     
@@ -75,7 +76,7 @@ height: calc(100vh - 70px);
 h1{
     width: 100%;
     
-    color: white;
+    /* color: white; */
     font-weight: 100;
 
 }
@@ -95,20 +96,7 @@ p{
     
 }
 
-@keyframes loadani {
-    from{
-        transform: translateY(75px);
-        /* transform: scale(1.3); */
-        opacity: 10%;
-    }
-    
-    to{
-        transform: translateY(0px);
-        /* transform: scale(1.0); */
-        opacity: 100%;
-    }
-    
-}
+
 
 
 }

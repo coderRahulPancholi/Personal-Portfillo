@@ -48,6 +48,7 @@ const Wrapper = styled.div`
 min-height: 70vh; 
   width: 100vw;
   padding: 1%;
+  background-color: ${({theme}) => theme.color.bg1};
 
  
   .title{
@@ -67,7 +68,8 @@ const Item = styled.div`
   max-width: 1000px;
   height:auto;
   border-radius: 10px;
-  background-color: #2e3033;
+  /* background-color: #2e3033; */
+  background-color:${({theme}) => theme.color.bg3};
   padding: 1%;
   
   
@@ -98,7 +100,7 @@ const Item = styled.div`
     h3{
       text-align: center;
       width: 100%;
-      color: white;
+      /* color: white; */
       /* font-weight: 200; */
     }
 

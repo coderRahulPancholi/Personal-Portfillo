@@ -9,12 +9,19 @@ export const GlobalStyle= createGlobalStyle`
     box-sizing: border-box;
     /* font-family: 'Inconsolata', monospace; */
     font-family: 'Open Sans', sans-serif;
+    /* background-color: ${({theme}) => theme.color.bg1}; */
+    transition: background 0.25s  linear;
+    
+    
+    
+    
 
    
 }
 body{
-    background-color: #181a18;
+    
     color:${({theme}) => theme.color.white}; 
+    
 }
 
 html{
@@ -52,11 +59,12 @@ h3{
     text-align: center;
     font-size: 3rem;
     padding: 1rem 0;
-    color: white;
+    color:${({theme}) => theme.color.heading}
 
 }
 p{
     font-size: 1.5rem;
+    color: ${({theme})=> theme.color.text};
     
     
 
@@ -64,6 +72,7 @@ p{
 
 a{
     text-decoration: none;
+    color: ${({theme})=> theme.color.text};
 
    
 }
@@ -75,7 +84,7 @@ li{
 background-color:${({theme}) => theme.color.btbg};
 border: 1px solid transparent;
 outline: none;
-color:${({theme}) => theme.color.white};
+/* color:${({theme}) => theme.color.white}; */
 border-radius: 0.5rem;
     padding: 1rem;
     font-size: 1.5rem;
@@ -130,5 +139,8 @@ border-radius: 0.5rem;
     min-height: 70vh;
 }
 
+.btn-text{
+    color: white;
+}
 
 `

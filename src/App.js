@@ -18,19 +18,45 @@ import Projects from './Components/Projes';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import {  useState } from 'react';
 
 function App() {
+  
 
-  const theme = {
+  const dark = {
 
     color:{
-      heading:"rgb(24 24 29)",
-      text:"rgb(24 24 29)",
+      heading:"white",
+      text:"white",
       white:"white",
       black:"#212529",
       helper:"#8490ff",
-      bg:"#daf0dd",
-      background:" linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
+      navbg:"#262926",
+      bg1:"#181a18",
+      bg2:"#161716",
+      bg3:"#252625",
+      btbg:"#2854b0",
+     
+
+
+    },
+
+    media:{ mobile: "768px", tab: "998px"},
+
+  }
+  const light = {
+
+    color:{
+      heading:"black",
+      text:"black",
+      white:"black",
+      black:"white",
+      helper:"#8490ff",
+      navbg:"#dbdbdb",
+      bg1:"#faf7f7",
+      bg2:"white",
+      bg3:"#e6e3e3",
+      
       btbg:"#2854b0",
 
 
@@ -39,10 +65,31 @@ function App() {
     media:{ mobile: "768px", tab: "998px"},
 
   }
+
+  
+ 
+  
+  const [mode,setMode]= useState("dark")
+  const togletheme=()=>{
+    if(mode === "dark"){
+
+      setMode("light")
+      setTheme(light)
+    }else if(mode === "light"){
+      setMode("dark")
+      setTheme(dark)
+    }else{
+      setMode("dark")
+      setTheme(dark)
+    }
+    
+  }
+  const [theme,setTheme]= useState(dark)
+  
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-    <Navbar title ="Rahul Sharma"/>
+    <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme}/>
     <Home/>
     <Projects/>
     <About/>

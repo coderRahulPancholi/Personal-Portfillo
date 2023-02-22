@@ -29,6 +29,7 @@ export default function About() {
       perc: 10,
     }
   ];
+  
 
   return (
     <AWrapper>
@@ -47,7 +48,7 @@ export default function About() {
                 
                 <div className="java">
                   <div className="line">
-                    <div style={{ width: `${i.perc}%`}} className="bar"></div>3
+                    <div style={{ width: `${i.perc}%`}} className="bar"></div>
                   </div>
                   <p>{i.perc}%</p>
                 </div>
@@ -70,7 +71,7 @@ min-height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #161716;
+  background-color: ${({theme}) => theme.color.bg2};
 
  
 
@@ -110,7 +111,8 @@ min-height: 70vh;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    background-color: #252625;
+    /* background-color: #252625; */
+    background-color:${({theme}) => theme.color.bg3};
     border-radius: 10px;
     padding: 10px;
     justify-content: center;

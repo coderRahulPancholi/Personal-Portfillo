@@ -95,7 +95,7 @@ function Contact() {
       <div className="maincont dfc ac">
         <div className="contactdiv numwsp df ac jsa wrap gap15">
           <div className="contlogo dfc ac jsc" onClick={()=>{window.open("tel:+91-9358393743","_blank")}}>
-            <img src={P} alt="" />
+            <img src={P}  alt="" />
             <p>Call Me</p>
           </div>
           <div className="contlogo dfc ac jsc" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
@@ -164,15 +164,17 @@ const Wrapper = styled.div`
   width: 100vw;
   padding: 2%;
   min-height: 70vh;
+  background-color: ${({theme}) => theme.color.bg1};
 
   /* background-color: #161716; */
   /* background-color: #161716; */
 
   h2 {
-    color: white;
+    /* color: white; */
     font-size: 50px;
   }
   .title {
+    color:${({theme}) => theme.color.heading};
     width: 100%;
     text-align: center;
     font-size: 20px;
@@ -183,7 +185,7 @@ const Wrapper = styled.div`
     gap: 40px;
 
     .contlogo {
-      color: white;
+      color:${({theme}) => theme.color.text};
       cursor: pointer;
       text-align: center;
     }
@@ -210,8 +212,8 @@ const Wrapper = styled.div`
         border: none;
         border-radius: 5px;
         /* background-color:#161716 ; */
-        background-color: #252625;
-        color: white;
+        background-color: ${({theme}) => theme.color.bg3};
+        color:${({theme}) => theme.color.text};
       }
       textarea {
         min-height: 100px;
@@ -222,8 +224,8 @@ const Wrapper = styled.div`
         border: none;
         border-radius: 5px;
         /* background-color:#161716 ; */
-        background-color: #252625;
-        color: white;
+        background-color: ${({theme}) => theme.color.bg3};
+        color:${({theme}) => theme.color.text};
 
         &::-webkit-scrollbar {
           display: none;
@@ -238,12 +240,12 @@ const Wrapper = styled.div`
         padding: 10px;
         border: none;
         border-radius: 10px;
-        background-color: #252625;
-        color: white;
+        background-color: ${({theme}) => theme.color.bg3};
+        color:${({theme}) => theme.color.text};
         font-weight: bold;
 
         &:hover {
-          background-color: #2d2e2d;
+          background-color: ${({theme}) => theme.color.bg2};
         }
       }
     }

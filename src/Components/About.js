@@ -68,7 +68,7 @@ flex-direction: column;
 gap: 20px;
 align-items: center;
 /* justify-content: ; */
-background-color: #161716;
+background-color: ${({theme}) => theme.color.bg2};
 
 .profilep{
   width: 90%;
@@ -103,7 +103,8 @@ background-color: #161716;
     overflow-x: hidden;
     
     
-    background-color: #252625;
+    /* background-color: #252625; */
+    background-color:${({theme}) => theme.color.bg3};
     border-radius: 10px;
   
     padding: 5px;
@@ -125,7 +126,7 @@ background-color: #161716;
   ul li a{
     text-decoration: underline;
 
-    color: white;
+    
 
    
   }
