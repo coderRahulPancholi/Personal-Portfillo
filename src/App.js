@@ -71,8 +71,8 @@ function App() {
 
   
  
-  
-  const [mode,setMode]= useState("dark")
+  const [mode,setMode]= useState('dark')
+  const [theme,setTheme]= useState(dark)
   const togletheme=()=>{
     if(mode === "dark"){
 
@@ -87,12 +87,13 @@ function App() {
     }
     
   }
-  const [theme,setTheme]= useState(dark)
+  
+  
   
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-    <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme}/>
+    <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme} mode = {mode}/>
     <Home/>
     <Projects/>
     <About/>

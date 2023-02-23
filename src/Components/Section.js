@@ -26,7 +26,7 @@ function Section() {
             I have created some beautifull website using it go trough my projects section to see it.
 
             </p>
-            <button className='btn hire-btn btn-text'>Hire Me</button>
+            <button className='bt hire-btn btn-text'>Hire Me</button>
             </div>
         </div>
       

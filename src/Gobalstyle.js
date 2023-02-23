@@ -104,7 +104,7 @@ li{
     color: ${({theme})=> theme.color.text};
 }
 
-.btn{
+.bt{
 background-color:${({theme}) => theme.color.btbg};
 border: 1px solid transparent;
 outline: none;

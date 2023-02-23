@@ -1,11 +1,26 @@
 import React, { useEffect, useState } from 'react'
+// import * as React from 'react';
 // import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 // import darksvg from '../Assests/dark.svg'
+// import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+// import FormGroup from '@mui/material/FormGroup';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Switch from '@mui/material/Switch';
+// import * as React from 'react';
+// import  styled  from '@mui/material/styles';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+
+
+
+
 
 
 
  function Navbar(props) {
+  
 
   const [navw , setNavw]= useState(false);
 
@@ -28,6 +43,9 @@ import styled from 'styled-components'
         return()=> window.removeEventListener("scroll", listenToScroll);
 
     },[]);
+
+   
+    
   
   return (
    
@@ -44,17 +62,18 @@ import styled from 'styled-components'
             <h3>{props.title}</h3>
         </div>
         <div className="themetoggle" >
-          {/* {props.theme === props.dark?<p onClick={props.themer}>light</p >:<p onClick={props.themer}>dark</p>} */}
-   
-          <div class="dfjac">
-  <input type="checkbox" class="custom-control-input" id="customSwitch1"  onChange={props.themer} defaultChecked/>
-  <label class="custom-control-label" for="customSwitch1" >Enable Dark Mode</label>
-</div>
+       
+<FormGroup>
+      <FormControlLabel control={<Switch  defaultChecked = {props.mode === 'dark'? true:false} />} label="Dark Mode" onChange={props.themer}/>
+     
+     
+    </FormGroup>
 
             {/* <img src={darksvg} alt="" /> */}
         </div>
 
-     
+       
+
         </div>
    
    
