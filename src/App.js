@@ -26,8 +26,9 @@ function App() {
   const dark = {
 
     color:{
-      heading:"white",
-      text:"white",
+      // heading:"#c2c1c0",
+      heading:"#edf1fc",
+      text:"#c2c1c0",
       white:"white",
       black:"#212529",
       helper:"#8490ff",
@@ -47,15 +48,17 @@ function App() {
   const light = {
 
     color:{
-      heading:"black",
-      text:"black",
+      heading:"#45423c",
+      text:"#45423c",
       white:"black",
       black:"white",
       helper:"#8490ff",
       navbg:"#dbdbdb",
+      // navbg:"black",
       bg1:"#faf7f7",
       bg2:"white",
-      bg3:"#e6e3e3",
+      // bg3:"#e6e3e3",
+      bg3:"#e8e9ed",
       
       btbg:"#2854b0",
 

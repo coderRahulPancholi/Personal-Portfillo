@@ -36,7 +36,7 @@ import styled from 'styled-components'
 
    
 
-       <div className="navbar" style={{maxWidth:navw ?"100%":"1200px"}}>
+       <div className="navbar" style={{maxWidth:navw ?"100%":"1200px",boxShadow:navw ?"rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset":"none"}}>
 
        
 
@@ -85,6 +85,7 @@ width: 100%;
 min-height: 70px;
 max-height: fit-content;
 margin: auto;
+/* transition: box-shadow 0.25s linear; */
 transition: max-width 0.25s linear;
 
 /* padding: 0 4.8rem; */

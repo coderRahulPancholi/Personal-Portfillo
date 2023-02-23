@@ -34,7 +34,7 @@ function About() {
             
             </ul>
           </div>
-          <div className="aboutme">
+          {/* <div className="aboutme">
             <h4 style={{fontSize:"20px"}}>Qualifitions</h4>
             <ul style={{padding:"10px",fontSize:"15px"}}>
             <li><b>Highest:-</b>Rahul Sharma</li>
@@ -49,7 +49,7 @@ function About() {
             <li><b>Adress:-</b>Bad ke balaji</li>
             
             </ul>
-          </div>
+          </div> */}
 
 
         </div>
@@ -91,7 +91,7 @@ background-color: ${({theme}) => theme.color.bg2};
   gap: 10px;
   flex-wrap: wrap;
   /* align-items: center; */
-  justify-content: space-around;
+  justify-content: center;
  
   
 

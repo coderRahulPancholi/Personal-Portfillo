@@ -60,6 +60,7 @@ background-color: ${({theme}) => theme.color.bg1};
   
     div{
         width: 90%;
+        max-width: 1200px;
 
     display: flex;
     flex-direction: column;

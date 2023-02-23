@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 
-export const GlobalStyle= createGlobalStyle`
+export const GlobalStyle= createGlobalStyle` 
 
 *{
     margin: 0;
@@ -11,8 +11,7 @@ export const GlobalStyle= createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     /* background-color: ${({theme}) => theme.color.bg1}; */
     transition: background 0.25s  linear;
-    
-    
+   
     
     
 
@@ -21,7 +20,23 @@ export const GlobalStyle= createGlobalStyle`
 body{
     
     color:${({theme}) => theme.color.white}; 
+    background-color:${({theme}) => theme.color.bg1} ;
     
+    
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+ 
+body::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+ background-color: transparent;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  /* outline: 1px solid black; */
+  border-radius: 10px;
 }
 
 html{
@@ -34,6 +49,7 @@ h1{
     font-size: 4rem;
     font-weight: 900;
    color:${({theme}) => theme.color.heading};
+   transition: color 0.25s  linear;
    /* text-align: center; */
 
 }
@@ -41,6 +57,7 @@ h2{
     font-size: 4.4rem;
     font-weight: 300;
     color:${({theme}) => theme.color.heading};
+    transition: color 0.25s  linear;
     /* text-align: center; */
     white-space: normal;
     
@@ -59,12 +76,17 @@ h3{
     text-align: center;
     font-size: 3rem;
     padding: 1rem 0;
-    color:${({theme}) => theme.color.heading}
+    color:${({theme}) => theme.color.heading};
+    transition: color 0.25s  linear;
 
+}
+h4{
+    color:${({theme}) => theme.color.heading};
 }
 p{
     font-size: 1.5rem;
     color: ${({theme})=> theme.color.text};
+    transition: color 0.25s  linear;
     
     
 
@@ -73,11 +95,13 @@ p{
 a{
     text-decoration: none;
     color: ${({theme})=> theme.color.text};
+    transition: color 0.25s  linear;
 
    
 }
 li{
     list-style: none;
+    color: ${({theme})=> theme.color.text};
 }
 
 .btn{
@@ -142,5 +166,4 @@ border-radius: 0.5rem;
 .btn-text{
     color: white;
 }
-
 `

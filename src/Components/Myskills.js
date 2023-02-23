@@ -152,6 +152,10 @@ min-height: 70vh;
         border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
         /* transition: width 5s ease ; */
+        
+
+
+       
       }
     }
   }
