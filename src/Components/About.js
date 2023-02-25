@@ -1,6 +1,6 @@
 import React  from "react";
 import styled from "styled-components";
-import pimg from "../Assests/pimg.jpg"
+import pimg from "../Assests/pjpg.png"
 
 
 function About() {
@@ -70,13 +70,24 @@ align-items: center;
 /* justify-content: ; */
 background-color: ${({theme}) => theme.color.bg2};
 
+
+
 .profilep{
   width: 90%;
   max-width: 300px;
   
   height: 300px;
  border-radius: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+ 
+  /* background-image: linear-gradient( 135deg,${({theme}) => theme.color.bg1}  10%, ${({theme}) => theme.color.btbg} 100%); */
+  
+  /* outline: 1px solid ${({theme})=>theme.color.btbg}; */
+  /* outline-offset: -5px; */
+  /* animation: identifier 2s ease  infinite ;
+  transition: animation 5s ease; */
+
+
   img{
     width: 100%;
   height: 100%;
@@ -101,7 +112,7 @@ background-color: ${({theme}) => theme.color.bg2};
     max-width: 400px;
     border-left: 3px solid #2854b0;
     overflow-x: hidden;
-    
+    z-index: 99;
     
     /* background-color: #252625; */
     background-color:${({theme}) => theme.color.bg3};

@@ -35,7 +35,7 @@ function Topbtn() {
  <Wrapper>
 {topbtnvissible && (
     <div className='topbtn' onClick={goToTop}>
-       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZ0lEQVR4nL1UO2zTUBR9TLRIfKbCwBoVZciI2j1SkFo6wJaNgSIFNrJkakUXYICmqCRRI2pSFlLiUA9EEShWf5JDHQEFhlA7jRI7Ig7gyM5Ehwv3NTH5OFW68KQjWe9dH513zz2PkP+1TNM8bxjGtKZpCU3TPiFUVV1TVfWOaZojAxMBwHC9Xn9Y0378Xn6ZgenAEnj9YQr8ZuI8VL9rB/l8PgQAQ0eSNRqNC7quf37+ah0mfUFwzcdhlOVh9PX6IVie7uFZjN0ARVEkQRAu9lM2pOv67r2FBIzPMv9I+mBsloG5Jwkol8v7kUjkbA8hXhOVDUJmkc4sU6WCIKz0GIA9m/DND0zWwuTtIO1pIBBwWoSGYdxCA2jPbH668jZLYXfmehSnRnEcd98irNVq7M3AUqcBTUy9ew/KTx0qv3S4ntnpOb+U4AH/FUVxmxByokX4Eceiu/haZocSPf0iUeA37nXXef1hkGV5jxByihJqmtZD2FIW+ipZe8Hdb7ZKvf4wSJKEhIduVyoVrv3KY2+2LWXdalpKscbmyicpIcYJG9syxbm2ATc2P/R1Fs+wxjJllQeGYRbbx2akWq0dTPiCxx6bq82x8Xg8no5ZxGzikGICBiUbn3kGL5KbkE6nk4SQMz3RUxRlD+OECRiEbG6BhWKxWHI6nZdt84xBL5VKMirFBLgex2nT22cOe4aJQmWFQmHf7XZPWfNnt6LR6OlsNruCfUGj6PN1N0RBn69VHrDfqVQq6XA4UFl/svaF2eQ47kEul9uSZVlCiKK4FYvFFpsGdPbsGAsVDBNCzhFCjn5Q/1b/AWEe9cbAL7v1AAAAAElFTkSuQmCC" alt=''/>
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADKklEQVR4nO2azU8TURDA9+THQaOJXwcTjGn6XkmJBzzqzfiRqEjnvdiWg3+BgfhfKB40khivHontDLWgnLwS4lkK9ORnIMgZxFAz3dqA3S3d3bcfEiaZZNNuX+eXmXk782Yt60D2qQwUqyczObwnFY0LRdMSsCYA1wXQpq24LhUuNL9TNJ6GqaFLQ3jCSoKkbs4cFopGhKJZCfRbKmp4Uv4N4DuhschrWVHLeT15VGp6JAG/eTbeFQq/SoVjfQ8+HIkEIg3lWxKobgzgHxWAyyKHN0IDYNdLhc/DAugEotfseaMQ2fzUWQn0MSoI2VacvzhcOmMEQtzHC+zu6CHI9ozCJbYhEERKT57mbTQuCPlXger9unrOFwTvHvGEE7mGma8tWip8Gb/xtDvMAF9432ITYLh0DLPy9d6f1kCLsRusXL2y3NNDs/nEToDBshuMptE9vWGXCvEbK7vrl66JzwVgAoxs9KRQLnQDmTX8hytS46AAuty8Nrv2jGs/4asU7wYxXMq2c2+4lDUJIxRupUZmjneAtJoi4xBNgJ3XJmFyeKdztwJ6GgqEbbjTZ8H/C/CJU35MB1+YVoXGAV4vnatIAfjD9TtF3w3AVBxAcCkET/i5p+HBI7VOEKCfoXhir3uDeAZo1QlkM3QI4zC4YQbED4RRGNwIHlpBIEzBgHNoeat4NQ4aStr2BiDsCsCLRxYcQLDqZZG0Ll8xWHqs8FoZwKuBt18+xjRgUKQqgB6HXaJEo1C+3QHCB8qGi8awvfHLsWhshdf7/wcEq44QzYTXWIzbQNm75vdFq9uvJw+5gtjhhWOJDyuFD7tC7PBKLcEQSz2fOPJ8Im6DpaPidiZH13qCaMMonIjfcNqtgM88QbRDTOF8gkJqbs8Ed5N0oXIqEfkCVOdhkxV40BO8DfbvCaDFTO5Nn2VCePwVR5gJhXM8bLLCGYbidkTh9CrU2TvPJ0INNcCa5y3WrzRnKJpGuVQwmAuf+YkdyxsQdhVQLvDhHp/F+siBrVZnmve9tZoW7g34LJaPMYWit60XaNbaL9UoWpNAn7g95c6OmyJxl44ZN+RArGTIH31QF3B1zHiFAAAAAElFTkSuQmCC" alt='Top' />
     </div>
     )}
 
@@ -43,6 +43,7 @@ function Topbtn() {
   )
 };
 const Wrapper = styled.section`
+ 
 
 .topbtn{
     cursor: pointer;
@@ -51,8 +52,15 @@ const Wrapper = styled.section`
     bottom: 1rem;
     z-index: 99;
     animation: topindi 1s ease-in-out 3s infinite ;
-  
+    
    
+   
+  
+   img{
+    background-color: ${({theme})=>theme.color.white};
+    border-radius: 100%;
+
+   }
 
 
     @keyframes topindi {
