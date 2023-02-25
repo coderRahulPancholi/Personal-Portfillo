@@ -9,6 +9,7 @@ import In from '../Assests/Insta.svg'
 export default function Footer() {
   return (
     <Footr className='dfc jsb ac'>
+      <p style={{padding:"5px"}}>Follow Me</p>
       <div className="social dfjac">
         <div className="icons" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
             <img src={Wh} alt="" />
@@ -37,7 +38,7 @@ export default function Footer() {
 
 const Footr =styled.div`
 width: 100vw;
-/* padding: 15px; */
+padding: 15px 0 0 0;
 background-color: ${({theme}) => theme.color.bg2};
 /* display: flex;
 flex-direction: column;
@@ -47,7 +48,7 @@ text-align: center;
 
 .social{
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     /* display: flex;
     align-items: center;
     justify-content: center; */

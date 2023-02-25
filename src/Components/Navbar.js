@@ -59,7 +59,7 @@ import Switch from '@mui/material/Switch';
        
 
         <div className="title">
-            <h3>{props.title}</h3>
+            <h3 style={{color:navw?`${({theme})=>theme.color.btbg}`:`${({theme}) => theme.color.heading};`}}>{props.title}</h3>
         </div>
         <div className="themetoggle" >
        
@@ -95,6 +95,7 @@ background-color: ${({theme}) => theme.color.bg1};
 position: sticky;
 top: 0;
 width: 100vw;
+z-index: 999;
 
 .navbar{
 
@@ -111,7 +112,7 @@ transition: max-width 0.25s linear;
 
 background-color: ${({theme})=> theme.color.navbg};
 
-z-index: 999;
+
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 display: flex;

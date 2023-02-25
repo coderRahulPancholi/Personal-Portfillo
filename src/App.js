@@ -19,6 +19,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import {  useState } from 'react';
+// import Swicth from './Components/Swicth';
 
 function App() {
   
@@ -95,8 +96,8 @@ function App() {
       <GlobalStyle/>
     <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme} mode = {mode}/>
     <Home/>
-    <Projects/>
-    <About/>
+    <Projects dark ={dark} mode = {mode}/>
+    <About />
     <Contact/>
     <Footer/>
     
@@ -104,6 +105,7 @@ function App() {
 
    
     </ThemeProvider>
+    // <Swicth/>
   
   )
 }

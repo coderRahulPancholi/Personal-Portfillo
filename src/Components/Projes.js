@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Project_Data } from "../Data/Projects";
 
 
-export default function Projes() {
+export default function Projes(props) {
   return (
     <Wrapper>
        
@@ -16,7 +16,7 @@ export default function Projes() {
           {Project_Data.map((i,ind) => {
             return <Item key={ind} className="df jsa as wrap gap10">
               <div className="img">
-                <img src={i.img} alt="" />
+                <img src={i.img} alt="porject Images" style={{opacity:props.mode==="dark"?"50%":"100%"}}/>
                 
 
               </div>
@@ -49,6 +49,7 @@ min-height: 70vh;
   width: 100vw;
   padding: 1%;
   background-color: ${({theme}) => theme.color.bg1};
+  
 
  
   .title{

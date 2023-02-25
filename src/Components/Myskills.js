@@ -5,16 +5,16 @@ import styled from "styled-components";
 export default function About() {
   const skills = [
     {
-      title: "Java",
-      perc: 55,
+      title: "Java Script",
+      perc: 60,
     },
     {
       title: "Html",
-      perc: 99,
+      perc: 80,
     },
     {
       title: "Css",
-      perc: 95,
+      perc: 90,
     },
     {
       title: "ReactJs",
@@ -22,22 +22,22 @@ export default function About() {
     },
     {
       title: "NodeJs",
-      perc: 20,
+      perc: 40,
     },
     {
       title: "Redux",
-      perc: 10,
+      perc: 30,
     }
   ];
   
 
   return (
     <AWrapper>
-      <div className="maincont">
         <div className="title">
-          <h3>Skills </h3>
+          <h3>Skills & Working Area  </h3>
           <p>Here's Some details about my skills with their percenteges</p>
         </div>
+      <div className="maincont">
 
         <div className="skills">
           <div className="skcnt">
@@ -48,7 +48,7 @@ export default function About() {
                 
                 <div className="java">
                   <div className="line">
-                    <div style={{ width: `${i.perc}%`}} className="bar"></div>
+                    <div style={{ width: `${i.perc}%`}} className="bar"> <div className="ani"></div></div>
                   </div>
                   <p>{i.perc}%</p>
                 </div>
@@ -69,8 +69,12 @@ export default function About() {
 const AWrapper = styled.section`
 min-height: 70vh;
   width: 100%;
+  padding: 2%;
   display: flex;
-  justify-content: center;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+  /* justify-content: center; */
   background-color: ${({theme}) => theme.color.bg2};
 
  
@@ -86,15 +90,14 @@ min-height: 70vh;
   }
   .maincont {
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    padding: 1%;
+    
+   
     
   }
   .skills {
     width: 100%;
-    padding: 5% 0;
+    
   }
 
   .skcnt {
@@ -135,7 +138,7 @@ min-height: 70vh;
       height: 10px;
       width: 100%;
       overflow: hidden;
-      background-color: white;
+      background-color: ${({theme}) => theme.color.bg2};
       border-radius: 5px;
       /* border-top-right-radius: 5px;
       border-bottom-right-radius: 5px; */
@@ -147,12 +150,41 @@ min-height: 70vh;
         height: 100%;
 
         background-color: ${({theme}) => theme.color.btbg};
-        
-
+        display: flex;
+align-items: center;
         border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
         /* transition: width 5s ease ; */
         
+       
+        
+
+        .ani{
+          height: 100%;
+          /* width: 10%; */
+          /* background-color: white; */
+          background: linear-gradient(to right, transparent 20%, #ffffff 94%);
+          /* border: 1px solid white; */
+          border-radius: 5px;
+      /* border-bottom-right-radius: 5px; */
+      opacity: 25%;
+     
+      animation: identifier 5s ease-out  infinite  ;
+      
+
+      @keyframes identifier {
+        from{
+          width: 0;
+           
+        }
+        to{
+         width: 100%;
+          
+        }
+        }
+        
+      }
+      
 
 
        
