@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Project_Data } from "../Data/Projects";
 
+ 
+
 
 export default function Projes(props) {
   return (
-    <Wrapper>
+    <Wrapper className="wrapper" id="projects">
        
       <Maincontainer className="dfa">
       <div className="title">
@@ -45,9 +47,9 @@ export default function Projes(props) {
 }
 
 const Wrapper = styled.div`
-min-height: 70vh; 
+/* min-height: 70vh;  */
   width: 100vw;
-  padding: 1%;
+  
   background-color: ${({theme}) => theme.color.bg1};
   
 

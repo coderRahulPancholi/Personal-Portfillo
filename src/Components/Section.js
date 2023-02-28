@@ -1,6 +1,10 @@
 import React from 'react'
+import { Link } from 'react-scroll'
+
 // import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+// import Contact from './Contact'
+
 
 
 
@@ -12,37 +16,44 @@ function Section() {
  
 
   return (
-  <Wrapper className='df ac'>
+  <AWrapper className='df  ' id='home' >
     
-        <div className="section-data df jc">
+        <div className="section-data df jc ac" >
             <div>
 
            
             <p className='toppara'>Welcome I'm</p>
             <h1 className='myname'>Rahul<b className='surname'> Sharma</b></h1>
+            
             <p className='mydata'>A fornted devopler currently i am learning react js.
             </p>
             <p className='mydata'>
             I have created some beautifull website using it go trough my projects section to see it.
 
             </p>
-            <button className='bt hire-btn btn-text'>Hire Me</button>
+            <Link to="contactme" smooth={true} >
+                
+            <button className='bt hire-btn btn-text' style={{cursor:"pointer"}}>Hire Me</button>
+
+            </Link>
             </div>
+          
         </div>
       
     
 
 
 
-  </Wrapper>
+  </AWrapper>
 
    
   )
 }
-const Wrapper = styled.section`
+const AWrapper = styled.section`
 width: 100%;
 /* height: 70%; */
-height: calc(100vh - 70px);
+/* height: calc(100vh - 70px); */
+height: 100vh;
 background-color: ${({theme}) => theme.color.bg1};
 
 
@@ -53,6 +64,8 @@ background-color: ${({theme}) => theme.color.bg1};
 .section-data{
     width: 100%;
     /* animation: loadani 1s ease  1  ; */
+    height: 90%;
+    
    
    
     
@@ -65,7 +78,7 @@ background-color: ${({theme}) => theme.color.bg1};
     display: flex;
     flex-direction: column;
     
-    align-self: flex-start;
+    align-self: center;
     /* padding: 20px; */
     
     gap: 10px;
@@ -101,9 +114,6 @@ p{
 
 
 }
-
-
-
 
 
 `

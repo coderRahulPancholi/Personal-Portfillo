@@ -50,7 +50,7 @@ const Wrapper = styled.section`
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    z-index: 99;
+    z-index: 9999;
     animation: topindi 1s ease-in-out 3s infinite ;
     
    

@@ -4,11 +4,8 @@ import pimg from "../Assests/pjpg.png"
 
 
 function About() {
-  
-  
-
   return (
-    <AWrapper>
+    <Wrapper className="wrapper" id="about">
        <div className="title">
           <h3>About Me </h3>
         </div>
@@ -55,12 +52,12 @@ function About() {
         </div>
 
     
-    </AWrapper>
+    </Wrapper>
   );
 }
 
-const AWrapper = styled.section`
-min-height: 70vh;
+const Wrapper = styled.section`
+/* min-height: 70vh; */
 width: 100vw;
 padding: 2%;
 display: flex;

@@ -46,7 +46,7 @@ html{
 
 }
 h1{
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 900;
    color:${({theme}) => theme.color.heading};
    transition: color 0.25s  linear;
@@ -165,5 +165,12 @@ border-radius: 0.5rem;
 
 .btn-text{
     color: white;
+}
+
+.wrapper{
+    min-height: 90vh;
+    padding: 70px 0;
+    /* margin-top: 70px; */
+    justify-content: center;
 }
 `

@@ -1,6 +1,9 @@
-import React from "react";
+import React  from "react";
 
 import styled from "styled-components";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
 
 export default function About() {
   const skills = [
@@ -29,28 +32,32 @@ export default function About() {
       perc: 30,
     }
   ];
+
+const [ref,inView] = useInView({
+  threshold:0,
+})
   
 
   return (
-    <AWrapper>
-        <div className="title">
+    <Wrapper className="wrapper" id="skills"  ref={ref}  >
+        <div className="title ">
           <h3>Skills & Working Area  </h3>
           <p>Here's Some details about my skills with their percenteges</p>
         </div>
-      <div className="maincont">
+      <div className="maincont" >
 
-        <div className="skills">
-          <div className="skcnt">
+        <div className="skills" >
+          <div className="skcnt" >
             {skills.map((i,ind) => {
               return (
-                <div className="allskilss" key={ind}>
+                <div className="allskilss" key={ind} >
 
                 
                 <div className="java">
                   <div className="line">
-                    <div style={{ width: `${i.perc}%`}} className="bar"> <div className="ani"></div></div>
+                    <div style={{ width:inView?`${i.perc}%`:"0"}} className="bar"> <div className="ani"></div></div>
                   </div>
-                  <p>{i.perc}%</p>
+                  <p>{inView?<CountUp start={0} end={i.perc} duration={2}/>:"0"}%</p>
                 </div>
                 <div className="title">
                     <h4>{i.title}</h4>
@@ -62,17 +69,19 @@ export default function About() {
           </div>
         </div>
       </div>
-    </AWrapper>
+    </Wrapper>
   );
 }
 
-const AWrapper = styled.section`
-min-height: 70vh;
+const Wrapper = styled.section`
+/* min-height: 90vh; */
+/* height: 90vh; */
   width: 100%;
-  padding: 2%;
+  /* padding: 2%; */
   display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: space-around;
 gap: 20px;
   /* justify-content: center; */
   background-color: ${({theme}) => theme.color.bg2};
@@ -87,21 +96,25 @@ gap: 20px;
     width: 100%;
     text-align: center;
     font-size: 20px;
+    height: 20%;
   }
   .maincont {
     width: 90%;
-    padding: 1%;
+    /* padding: 1%; */
+    height: 80%;
     
    
     
   }
   .skills {
     width: 100%;
+    height: 100%;
     
   }
 
   .skcnt {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -154,7 +167,7 @@ gap: 20px;
 align-items: center;
         border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-        /* transition: width 5s ease ; */
+        transition: width 3s ease ;
         
        
         

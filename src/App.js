@@ -19,6 +19,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import {  useState } from 'react';
+// import BottomNav from './Components/BottomNav';
 // import Swicth from './Components/Swicth';
 
 function App() {
@@ -102,6 +103,7 @@ function App() {
     <Footer/>
     
     <Topbtn/>
+    {/* <BottomNav/> */}
 
    
     </ThemeProvider>

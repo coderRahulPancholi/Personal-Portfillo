@@ -87,7 +87,7 @@ function Contact() {
   };
 
   return (
-    <Wrapper className="dfc ac gap20">
+    <Wrapper className="dfc ac jc gap20 wrapper" id="contactme">
       <div className="title">
         <h3>Contact Me </h3>
         <p>Feel Free to Contact me </p>
@@ -162,8 +162,8 @@ function Contact() {
 }
 const Wrapper = styled.div`
   width: 100vw;
-  padding: 2%;
-  min-height: 70vh;
+  /* padding: 2%; */
+  /* min-height: 70vh; */
   background-color: ${({theme}) => theme.color.bg1};
 
   /* background-color: #161716; */
