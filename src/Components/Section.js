@@ -6,6 +6,7 @@ import styled from "styled-components";
 // import Contact from './Contact'
 import bi from "../Assests/background.png";
 
+
 function Section() {
   return (
     <AWrapper className="df  " id="home">
@@ -23,14 +24,15 @@ function Section() {
             I have created some beautifull website using it go trough my
             projects section to see it.
           </p>
-          <Link to="contactme" smooth={true}>
+          
             <button
               className="bt hire-btn btn-text"
               style={{ cursor: "pointer" }}
-            >
+            ><Link to="contactme" smooth={true} style={{color:"white"}}>
               Hire Me
+              </Link>
             </button>
-          </Link>
+          
         </div>
       </div>
 
