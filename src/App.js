@@ -29,7 +29,7 @@ function App() {
 
     color:{
       // heading:"#c2c1c0",
-      heading:"#edf1fc",
+      heading:"#b3b4b5",
       text:"#c2c1c0",
       white:"white",
       black:"#212529",

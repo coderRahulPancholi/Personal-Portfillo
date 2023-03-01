@@ -44,7 +44,7 @@ const [ref,inView] = useInView({
           <h3>Skills & Working Area  </h3>
           <p>Here's Some details about my skills with their percenteges</p>
         </div>
-      <div className="maincont" >
+      <div className="maincont ac" >
 
         <div className="skills" >
           <div className="skcnt" >
@@ -57,7 +57,7 @@ const [ref,inView] = useInView({
                   <div className="line">
                     <div style={{ width:inView?`${i.perc}%`:"0"}} className="bar"> <div className="ani"></div></div>
                   </div>
-                  <p>{inView?<CountUp start={0} end={i.perc} duration={2}/>:"0"}%</p>
+                  <p>{inView?<CountUp start={0} end={i.perc} duration={1}/>:"0"}%</p>
                 </div>
                 <div className="title">
                     <h4>{i.title}</h4>
@@ -116,7 +116,8 @@ gap: 20px;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     gap: 25px;
     justify-content: center;
     align-items: center;
@@ -124,7 +125,7 @@ gap: 20px;
 
   .allskilss{
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     /* background-color: #252625; */
@@ -138,17 +139,17 @@ gap: 20px;
   }
 
   .java {
+    
     height: 50px;
     width: 100%;
     display: flex;
     gap: 5px;
     
-
     justify-content: flex-start;
     align-items: center;
 
     .line {
-      height: 10px;
+      height: 12px;
       width: 100%;
       overflow: hidden;
       background-color: ${({theme}) => theme.color.bg2};
@@ -167,7 +168,7 @@ gap: 20px;
 align-items: center;
         border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-        transition: width 3s ease ;
+        transition: width 1s ease ;
         
        
         

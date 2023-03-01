@@ -46,7 +46,7 @@ html{
 
 }
 h1{
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 900;
    color:${({theme}) => theme.color.heading};
    transition: color 0.25s  linear;
@@ -169,8 +169,10 @@ border-radius: 0.5rem;
 
 .wrapper{
     min-height: 90vh;
-    padding: 70px 0;
+    padding: 90px 0;
     /* margin-top: 70px; */
     justify-content: center;
 }
+
+
 `

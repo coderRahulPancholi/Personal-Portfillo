@@ -1,6 +1,6 @@
 import React  from "react";
 import styled from "styled-components";
-import pimg from "../Assests/pjpg.png"
+import pimg from "../Assests/pimg.png"
 
 
 function About() {
