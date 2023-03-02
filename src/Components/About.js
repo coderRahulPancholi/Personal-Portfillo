@@ -59,7 +59,7 @@ function About() {
 const Wrapper = styled.section`
 /* min-height: 70vh; */
 width: 100vw;
-padding: 2%;
+/* padding: 2%; */
 display: flex;
 flex-direction: column;
 gap: 20px;

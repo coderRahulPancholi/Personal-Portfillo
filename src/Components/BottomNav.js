@@ -15,18 +15,20 @@ import { BiMenu } from "react-icons/bi";
 export default function BottomNav() {
   const [isopen, setIsopen] = useState(false)
   return (
-    <BottomNavbar className='dfc ac jc gap15'>
+    <BottomNavbar className='dfc jc gap15' >
 
 
-        <div className=" df ac jc" style={{display:isopen?"flex":"none"}} >
-          <div className="bnav dfc ac jc"> 
+      
+          {isopen?
+          <div className="bnav dfc ac jc gap20"> 
             <div className="icon"> <Link to='home' smooth={true} activeClass='active' spy={true}> <div><AiOutlineHome size={30} /> </div></Link></div>
             <div className="icon"> <Link to='skills' smooth={true} activeClass='active' spy={true}> <AiOutlineComment size={30}/></Link></div>
             <div className="icon"><Link to='projects' smooth={true} activeClass='active' spy={true}> <AiOutlineCode size={30}/></Link></div>
             <div className="icon"><Link to='about' smooth={true} activeClass='active' spy={true}><AiOutlineUser size={30}/></Link></div>
             <div className="icon"> <Link to='contactme' smooth={true} activeClass='active' spy={true}> <AiOutlineComment size={30}/></Link></div>
-            </div>
-        </div>
+            </div>:null
+}
+      
 
         <div className='bnavenabler df ac jc' onClick={()=> setIsopen(!isopen)}>
 
@@ -54,11 +56,12 @@ z-index: 9999;
     /* max-width: 500px; */
     padding: 10px;
     /* height: 0; */
+  height: 400px;
     overflow: hidden;
     background-color: ${({theme})=>theme.color.navbg};
     border-radius: 50px;
-    gap: 40px;
- 
+    /* gap: 40px; */
+  
     .icon{
        
         
@@ -69,11 +72,15 @@ z-index: 9999;
         height: 30px;
         border-radius: 100%;
 
-      
-        }
+        &::active{
+        color: red;
+      }
+      }
+     
   
 
         }
+     
         
     
 }

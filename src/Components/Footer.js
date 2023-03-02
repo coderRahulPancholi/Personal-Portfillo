@@ -9,8 +9,10 @@ import In from '../Assests/Insta.svg'
 export default function Footer() {
   return (
     <Footr className='dfc jsb ac'>
+      <div className="social dfc ac">
       <p style={{padding:"5px"}}>Follow Me</p>
-      <div className="social dfjac">
+      <div className='df jac'>
+
         <div className="icons" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
             <img src={Wh} alt="" />
         </div>
@@ -26,6 +28,7 @@ export default function Footer() {
         <div className="icons">
             <img src={Tw} alt="" />
         </div>
+        </div>
       </div>
       <div className="copyrights">
         <p>Degine By RAHUL SHARMA Coprights@2023</p>
@@ -39,7 +42,8 @@ export default function Footer() {
 const Footr =styled.div`
 width: 100vw;
 
-padding: 35px 0 0 0;
+
+/* padding: 35px 0 0 0; */
 background-color: ${({theme}) => theme.color.bg2};
 /* display: flex;
 flex-direction: column;
@@ -49,7 +53,7 @@ text-align: center;
 
 .social{
     width: 100%;
-    padding: 5px;
+    padding: 15px 0 35px  0;
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -64,8 +68,9 @@ text-align: center;
     }
 }
 .copyrights{
-    padding: 15px;
+    padding: 5px;
     width: 100%;
+    
     
 }
 `

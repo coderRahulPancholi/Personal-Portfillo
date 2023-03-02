@@ -13,13 +13,14 @@ import Home from './Components/Home';
 import  {ThemeProvider} from "styled-components"
 import { GlobalStyle } from './Gobalstyle';
 // import Contact from './Components/Contact';
-// import Topbtn from './Components/Topbtn';
+import Topbtn from './Components/Topbtn';
 import Projects from './Components/Projes';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import {  useState } from 'react';
-import BottomNav from './Components/BottomNav';
+// import BottomNav from './Components/BottomNav';
+// import Qouts from './Components/Qouts';
 // import Swicth from './Components/Swicth';
 
 function App() {
@@ -99,11 +100,12 @@ function App() {
     <Home/>
     <Projects dark ={dark} mode = {mode}/>
     <About />
+    {/* <Qouts/> */}
     <Contact/>
     <Footer/>
     
-    {/* <Topbtn/> */}
-    <BottomNav/>
+    <Topbtn/>
+    {/* <BottomNav/> */}
 
    
     </ThemeProvider>

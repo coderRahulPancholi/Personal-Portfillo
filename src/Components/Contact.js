@@ -118,7 +118,7 @@ function Contact() {
         </div>
         <div className="formdiv dfc jsc ac gap15">
           <div className="form dfc ac gap15">
-            <p>Get In Touch</p>
+            <p>Get In Touch With Me</p>
             <input
               type="text"
               placeholder="Name"
@@ -211,7 +211,7 @@ const Wrapper = styled.div`
       width: 100%;
       max-width: 500px;
       border-radius: 15px;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 15px 0px;
       padding: 20px;
     }
 
