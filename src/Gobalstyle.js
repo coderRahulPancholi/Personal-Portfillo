@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-
-export const GlobalStyle= createGlobalStyle` 
+export const GlobalStyle = createGlobalStyle` 
 
 *{
     margin: 0;
@@ -9,7 +8,7 @@ export const GlobalStyle= createGlobalStyle`
     box-sizing: border-box;
     /* font-family: 'Inconsolata', monospace; */
     font-family: 'Open Sans', sans-serif;
-    /* background-color: ${({theme}) => theme.color.bg1}; */
+    /* background-color: ${({ theme }) => theme.color.bg1}; */
     transition: background 0.25s  linear;
    
     
@@ -19,8 +18,8 @@ export const GlobalStyle= createGlobalStyle`
 }
 body{
     
-    color:${({theme}) => theme.color.white}; 
-    background-color:${({theme}) => theme.color.bg1} ;
+    color:${({ theme }) => theme.color.white}; 
+    background-color:${({ theme }) => theme.color.bg1} ;
     
     
 }
@@ -48,7 +47,7 @@ html{
 h1{
     font-size: 5rem;
     font-weight: 900;
-   color:${({theme}) => theme.color.heading};
+   color:${({ theme }) => theme.color.heading};
    transition: color 0.25s  linear;
    /* text-align: center; */
 
@@ -56,7 +55,7 @@ h1{
 h2{
     font-size: 4.4rem;
     font-weight: 300;
-    color:${({theme}) => theme.color.heading};
+    color:${({ theme }) => theme.color.heading};
     transition: color 0.25s  linear;
     /* text-align: center; */
     white-space: normal;
@@ -76,43 +75,53 @@ h3{
     text-align: center;
     font-size: 3rem;
     padding: 1rem 0;
-    color:${({theme}) => theme.color.heading};
+    color:${({ theme }) => theme.color.heading};
     transition: color 0.25s  linear;
 
 }
 h4{
-    color:${({theme}) => theme.color.heading};
+    color:${({ theme }) => theme.color.heading};
 }
 p{
     font-size: 1.5rem;
-    color: ${({theme})=> theme.color.text};
-    transition: color 0.25s  linear;
-    
-    
-
+    color: ${({ theme }) => theme.color.text};
+    transition: color 0.25s  linear;   
 }
 
 a{
     text-decoration: none;
-    color: ${({theme})=> theme.color.text};
+    color: ${({ theme }) => theme.color.text};
     transition: color 0.25s  linear;
 
    
 }
 li{
     list-style: none;
-    color: ${({theme})=> theme.color.text};
+    color: ${({ theme }) => theme.color.text};
 }
 
 .bt{
-background-color:${({theme}) => theme.color.btbg};
+background-color:${({ theme }) => theme.color.btbg};
 border: 1px solid transparent;
 outline: none;
-/* color:${({theme}) => theme.color.white}; */
+/* color:${({ theme }) => theme.color.white}; */
 border-radius: 0.5rem;
     padding: 1rem;
     font-size: 1.5rem;
     width: 10rem;
+}
+.morebtn{
+    outline: none;
+    border: none;
+    padding: 5px;
+    min-width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.text};
+    /* text-decoration:underline; */
+
+    
+    
 }
 .dfjac{
      display: flex;
@@ -145,6 +154,10 @@ border-radius: 0.5rem;
 .as{
     align-items: flex-start;
 }
+
+.gap5{
+    gap: 5px;
+}
 .gap15{
     gap: 15px;
 }
@@ -175,4 +188,4 @@ border-radius: 0.5rem;
 }
 
 
-`
+`;

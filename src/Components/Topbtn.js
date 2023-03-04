@@ -17,7 +17,7 @@ function Topbtn() {
         let mheight = 250;
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
      
-        console.log(winScroll);
+        // console.log(winScroll);
         if(winScroll > mheight){
             settopbtnvissible(true);
 

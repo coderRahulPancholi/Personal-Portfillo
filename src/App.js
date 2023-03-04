@@ -22,6 +22,7 @@ import {  useState } from 'react';
 // import BottomNav from './Components/BottomNav';
 // import Qouts from './Components/Qouts';
 // import Swicth from './Components/Swicth';
+import ProjectState from "../src/Data/ProjectState"
 
 function App() {
   
@@ -94,6 +95,7 @@ function App() {
   
   
   return (
+   <ProjectState>
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
     <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme} mode = {mode}/>
@@ -109,8 +111,8 @@ function App() {
 
    
     </ThemeProvider>
-    // <Swicth/>
-  
+   
+    </ProjectState>
   )
 }
 
