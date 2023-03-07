@@ -2,16 +2,15 @@ import React, { useEffect, useState } from 'react'
 // import * as React from 'react';
 // import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-// import darksvg from '../Assests/dark.svg'
-// import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
+
+
 // import FormGroup from '@mui/material/FormGroup';
 // import FormControlLabel from '@mui/material/FormControlLabel';
 // import Switch from '@mui/material/Switch';
-// import * as React from 'react';
-// import  styled  from '@mui/material/styles';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+import { WiSolarEclipse } from "react-icons/wi";
+import { WiMoonAltWaxingGibbous2 } from "react-icons/wi";
+
 
 
 
@@ -60,17 +59,19 @@ import Switch from '@mui/material/Switch';
        
 
         <div className="title">
-            <h3 >{props.title}</h3>
+            <h3 >Rahul<b className="surname"> Sharma</b></h3>
         </div>
-        <div className="themetoggle" >
+        <div className="themetoggle"  >
        
-<FormGroup>
+{/* <FormGroup>
       <FormControlLabel control={<Switch  defaultChecked = {props.mode === 'dark'? true:false} />} label="Dark Mode" onChange={props.themer}/>
      
      
-    </FormGroup>
+    </FormGroup> */}
 
             {/* <img src={darksvg} alt="" /> */}
+
+            {props.mode === "dark"? <WiSolarEclipse size={40} onClick={props.themer} className="modeicon"/>:<WiMoonAltWaxingGibbous2 size={30} onClick={props.themer} className="modeicon"/>}
         </div>
 
        
@@ -98,7 +99,22 @@ top: 0;
 width: 100vw;
 z-index: 999;
 
+.modeicon{
+  /* color: white; */
+  cursor: pointer;
+  transform: rotate(-15deg);
+  transition: 0.5s;
+animation: mani 0.5s ease-out  1  ;
 
+
+
+ 
+}
+
+.surname {
+      /* width: 100%;  */
+      color: ${({ theme }) => theme.color.btbg};
+    }
 
 .navbar{
 
@@ -125,6 +141,16 @@ align-items: center;
 
 }
 
+@keyframes mani {
+    from{
+      transform: rotate(-15deg);
+    }
+    from{
+     
+      transform: rotate(90deg);
+    }
+    
+  }
 `
 
 export default Navbar

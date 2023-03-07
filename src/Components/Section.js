@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 // import { Link } from 'react-router-dom'
 import styled from "styled-components";
 // import Contact from './Contact'
-import bi from "../Assests/background.png";
+// import bi from "../Assests/background.png";
 
 
 function Section() {
@@ -19,8 +19,8 @@ function Section() {
 
           <p className="mydata">
             A fornted devopler currently i am learning react js.
-          </p>
-          <p className="mydata">
+          
+         
             I have created some beautifull website using it go trough my
             projects section to see it.
           </p>
@@ -37,7 +37,7 @@ function Section() {
       </div>
 
       <div className="img">
-        <img src={bi} alt=""  style={{width:"100%",height:"100%"}}/>
+        {/* <img src={bi} alt=""  style={{width:"100%",height:"100%"}}/> */}
       </div>
       
     </AWrapper>
@@ -68,6 +68,7 @@ const AWrapper = styled.section`
     width: 100%;
     /* animation: loadani 1s ease  1  ; */
     height: 90%;
+  
 
     .namedata {
       width: 90%;
@@ -80,27 +81,50 @@ const AWrapper = styled.section`
       color: white;
       z-index: 99;
     }
+.bt{
+  animation: ani  1.1s ease  1  ;
 
+  &:hover a{
+    text-decoration: underline;
+  }
+}
     h1 {
       width: 100%;
 
       /* color: white; */
       font-weight: 100;
+      animation: ani  1s ease  1  ;
     }
     a {
       text-decoration: none;
       color: black;
       font-weight: 800;
+      transition: 0.5s;
     }
     p {
       width: 100%;
+      max-width: 500px;
       /* overflow: hidden; */
+      animation: ani  0.8s ease  1  ;
     }
     .surname {
       /* width: 100%;  */
       color: ${({ theme }) => theme.color.btbg};
     }
   }
+
+  @keyframes ani {
+    from{
+      transform: translateY(70px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0px);
+      opacity: 100%;
+    }
+    
+  }
+
 `;
 
 export default Section;

@@ -98,7 +98,7 @@ function App() {
    <ProjectState>
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-    <Navbar title ="Rahul Sharma" themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme} mode = {mode}/>
+    <Navbar  themer= {togletheme} theme = {theme} dark = {dark} light ={light} setTheme ={setTheme} mode = {mode}/>
     <Home/>
     <Projects dark ={dark} mode = {mode}/>
     <About />

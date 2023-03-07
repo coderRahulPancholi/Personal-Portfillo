@@ -99,11 +99,13 @@ function Contact() {
             {/* <img src={P}  alt="" /> */}
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEwElEQVR4nO1ZW4hcRRC98f0A3wZFfGuIs9N114zGgBgVRRRB8jCKIPkQWcSwc6vuRJLFj1Hjh4+o+JGfoAb8UBERVExAiSsiced23dkl7ofEGDEI8S1xlexq3JW6O9nszPTc18yd8SMF/TPcrjmn+nR1dbVlHbOjdvNw+YT+avFqm/Fu8N37lY8DoGkteLS63yteX+ANZ1r/N+uvlnLAWAZNn4HGKWCaCR+4FzRuzbOzIjdePqknoNe8veZ4pZ0HFJMXDTh0/KI0PV9gvLBr4MGnO4HpqzaBN67KIWB6FsZKp2cGXPSrGN/sLHBqJLLf1s4tHQef94sQaDdT8BQMxXRYaffxjoEHdm4QrXYDPMwfGrdJVmsLvK1pKWia6Dp4nluN160Za0G6yFfcRcD4a6/AwxESGp9MDP7S4fIpirHaa/AQSImmlefek4iAYnwhhkanlKadoGky+1Wgn3K76JzYGUcx/hPh8H0pGeR726cHu7MSuDUWAWDa3toR7le+s7xuwoy1ICgjsifwb57dxVHSWSKaC9HjWuM8v1SQP4gCYTPeoTy8onaaF0HjFmD6GBgPxM5KEQReCXUyVlrYcq7G19oB0F8dPF95eLvStCdkFaYWV9ada3SwbBedqpgOhkR/OjrtRsmApm2NN0YEsRoRhEfNEz3nrkgJjDpnhfzxkhgrcFgxPdbKR1+V7EgfGneYI6jxuRgAlpnmFnjgNND4Rfhc/EQARkR/cwwCfxrvEcD4aYxM8EgL8ltC5n0DvrMqDLhYgQdOBKYf4mxmYyDiZQL8sHGe2r3xbJGG4ds/lKYNV+0ZPNmKYeA7q+KAD6TMeF/dZPmTWJM1TS4dGTyjjgDjTYk2W400ML0oGz/e+dPku34fFdg9L8HkOmBCSKJt0Pw+qanmfyvlscxXjD/Xvtsuv+e4eIl5FVsqYVMdgT7PvTgBgfHGEheYhlp8PzQXdcnxjF82y4FWBqsRG3wQnM11BORwSOJA2iaG6nWfcR/47m3A+F6YLCHGKR5aYktaCi0hmiNQadK1xnuTgGhraNdt3lgav0/kxKPVqVJxB0aenRVNBGaLqiSOcG/jgTJbDCaTA6QY0kwzEMBNSR2ZygLF9GqW4JWm36Wx1kTAZro1BYGDucr6C+oCMVZaKPeG7Ajgu1aro1yubimcvtHoS65/4DkPAeMzSiNJoRg0eg3nBSQccgM0Eqhp+OVUTplWtnRaLy9si4CmidD2Yx+vvzLqPmx2jL/BSOnyKAK1k3g8PQF8KTJKIolU2mQaiVO4BW8HqQjgIXuULookYI86lymmv9KRwHeMGaIpSPhRigA9FQl+3h9szLKnqRjXJfT5tVx5Ez5g0M60JBTTsFzSjcGZ7Uh8l2DjTuZ9vM5KapLflaZvU6/E7O2qeISINMKUxg9SyPLhxODnolVxFymNP7ZBYm4DppxXtto1Sa3detyAo7KZVpqesDplkr4U0+ddAj8hD4hWp00yCzA+rZj+zgq8YvIi+5/tWp/vXCPNpc6CxwNBy2amfJzVLZOXd6XxrfQbNAC+W86ERDk+i+fX4I1A4zY5cMK7C8GTlVychqK6dD0zuaWJzOSBMOhE+M5y8NxrpXXTO1THzMrM/gOAZaCSlE0aoAAAAABJRU5ErkJggg==" alt="Call me"/>
             <p>Call Me</p>
+            
           </div>
           <div className="contlogo dfc ac jsc fx1" onClick={()=>{window.open("https://api.whatsapp.com/send?phone=919358393743","_blank")}}>
             <img src={W} alt="" />
             
             <p>Chat With Me</p>
+           
           </div>
           <div className="contlogo dfc ac jsc fx1" onClick={()=>{window.open("https://mail.google.com/mail/u/0/?fs=1&to=rahulpancholi3937@gmail.com&tf=cm","_blank")}}>
             {/* <img src={M} alt="" /> */}
@@ -117,32 +119,43 @@ function Contact() {
           </div>
         </div>
         <div className="formdiv dfc jsc ac gap15">
-          <div className="form dfc ac gap15">
+          <div className="form dfc ac gap20">
             <p>Get In Touch With Me</p>
+            <div className="inputbox"> 
             <input
               type="text"
-              placeholder="Name"
+             required
               value={name}
               onChange={(e) => setName(e.target.value.toUpperCase())}
-            />
+              className="input"
+            /> <span>Name</span>
+            </div>
+            <div className="inputbox"> 
             <input
               type="text"
-              placeholder="Mobile Number"
+              required
               value={number}
               onChange={(e) => setNumber(e.target.value)}
-            />
+              className="input"
+            /><span>Mobile Number</span>
+            </div>
+            <div className="inputbox"> 
             <input
               type="text"
-              placeholder="Email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
+              className="input"
+            /><span>Email</span></div>
+            <div className="inputbox">
             <textarea
               type="text"
-              placeholder="Your Message"
+             required
               value={Message}
               onChange={(e) => setMessage(e.target.value)}
-            />
+              className="input"
+            /><span>Your Message</span>
+            </div>
           </div>
           <div
             className="error"
@@ -198,6 +211,7 @@ const Wrapper = styled.div`
       color:${({theme}) => theme.color.text};
       cursor: pointer;
       text-align: center;
+      /* background-color: ${({theme}) => theme.color.bg2}; */
     }
     .numwsp {
       /* min-height: 50; */
@@ -217,8 +231,12 @@ const Wrapper = styled.div`
 
     .form {
       width: 100%;
+.inputbox{
+width: 100%;
+position: relative;
 
-      input {
+
+     input {
         width: 100%;
         padding: 15px;
         outline: none;
@@ -244,7 +262,43 @@ const Wrapper = styled.div`
           display: none;
         }
       }
+
+      span{
+        position: absolute;
+        left:0;
+        padding: 15px;
+        /* min-height: 100px; */
+        border-radius: 5px;
+        pointer-events: none;
+        letter-spacing: 1px;
+        transition: 0.5s;
+        font-weight: 100;
+        font-size: 15px;
+      }
     }
+.input:focus ~ span ,
+.input:valid ~ span 
+
+{
+transform: translateY(-10px);
+background-color: ${({theme}) => theme.color.btbg};
+
+padding: 0px 15px;
+left: 10px;
+font-size: 12px;
+
+
+}
+.input:focus ,
+.input:valid 
+{
+  /* border: 0.2px solid ${({theme}) => theme.color.btbg}; */
+
+}
+
+    }
+
+
     .buttons {
       width: 100%;
 
@@ -262,6 +316,15 @@ const Wrapper = styled.div`
         }
       }
     }
+  }
+
+
+  @media screen and (max-width:650px){
+    .numwsp{
+      flex-direction: column;
+      gap: 25px;
+    }
+    
   }
 `;
 
