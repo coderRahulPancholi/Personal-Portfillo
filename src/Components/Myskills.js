@@ -30,7 +30,27 @@ export default function About() {
     {
       title: "Redux",
       perc: 30,
-    }
+    },
+    {
+      title: "Bootstrap",
+      perc: 60,
+    },
+    {
+      title: "Express",
+      perc: 30,
+    },
+    {
+      title: "Mongo DB",
+      perc: 10,
+    },
+    {
+      title: "GitHub",
+      perc: 80,
+    },
+    {
+      title: "Netlify",
+      perc: 80,
+    },
   ];
 
 const [ref,inView] = useInView({
@@ -41,13 +61,13 @@ const [ref,inView] = useInView({
   return (
     <Wrapper className="wrapper" id="skills"  ref={ref}  >
         <div className="title ">
-          <h3>Skills & Working Area  </h3>
+          <h3>Skills & Abilities </h3>
           <p>Here's Some details about my skills with their percenteges</p>
         </div>
       <div className="maincont ac" >
 
-        <div className="skills" >
-          <div className="skcnt" >
+        <div className="skills df jc ac " >
+          <div className="skcnt df ac j wrap" >
             {skills.map((i,ind) => {
               return (
                 <div className="allskilss" key={ind} >
@@ -81,7 +101,7 @@ const Wrapper = styled.section`
   display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: flex-start;
 gap: 20px;
   /* justify-content: center; */
   background-color: ${({theme}) => theme.color.bg2};
@@ -108,24 +128,27 @@ gap: 20px;
   }
   .skills {
     width: 100%;
+    
     height: 100%;
     
   }
 
   .skcnt {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    display: flex;
+    /* display: flex; */
     /* flex-wrap: wrap; */
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 25px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .allskilss{
+    flex: 1;
+    flex-basis: 400px;
     width: 100%;
-    max-width: 700px;
+    /* max-width: 600px; */
     display: flex;
     flex-direction: column;
     /* background-color: #252625; */

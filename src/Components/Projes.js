@@ -114,9 +114,9 @@ const Items = styled.div`
 `;
 const Item = styled.div`
   flex: 1;
-  flex-basis: 500px;
+  flex-basis: 400px;
   /* width: 90%; */
-  /* max-width: 550px; */
+  /* max-width: 800px; */
   height: 250px;
   /* height:auto; */
   border-radius: 15px;

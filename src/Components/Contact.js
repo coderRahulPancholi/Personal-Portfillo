@@ -274,6 +274,7 @@ position: relative;
         transition: 0.5s;
         font-weight: 100;
         font-size: 15px;
+        
       }
     }
 .input:focus ~ span ,
@@ -282,7 +283,7 @@ position: relative;
 {
 transform: translateY(-10px);
 background-color: ${({theme}) => theme.color.btbg};
-
+color: white;
 padding: 0px 15px;
 left: 10px;
 font-size: 12px;

@@ -51,6 +51,7 @@ const AWrapper = styled.section`
   background-color: ${({ theme }) => theme.color.bg1};
 
   position: relative;
+  
 
   .img {
     position: absolute;
@@ -82,7 +83,7 @@ const AWrapper = styled.section`
       z-index: 99;
     }
 .bt{
-  animation: ani  1.1s ease  1  ;
+  animation: ani  2s ease  1  ;
 
   &:hover a{
     text-decoration: underline;
@@ -93,7 +94,7 @@ const AWrapper = styled.section`
 
       /* color: white; */
       font-weight: 100;
-      animation: ani  1s ease  1  ;
+      animation: ani  0.8s ease  1  ;
     }
     a {
       text-decoration: none;
@@ -105,7 +106,7 @@ const AWrapper = styled.section`
       width: 100%;
       max-width: 500px;
       /* overflow: hidden; */
-      animation: ani  0.8s ease  1  ;
+      animation: ani  1s ease  1  ;
     }
     .surname {
       /* width: 100%;  */
