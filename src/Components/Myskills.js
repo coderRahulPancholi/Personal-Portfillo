@@ -59,7 +59,7 @@ const [ref,inView] = useInView({
   
 
   return (
-    <Wrapper className="wrapper" id="skills"  ref={ref}  >
+    <Wrapper className="wrapper " id="skills"  ref={ref}  >
         <div className="title ">
           <h3>Skills & Abilities </h3>
           <p>Here's Some details about my skills with their percenteges</p>
@@ -67,7 +67,7 @@ const [ref,inView] = useInView({
       <div className="maincont ac" >
 
         <div className="skills df jc ac " >
-          <div className="skcnt df ac j wrap" >
+          <div className="skcnt df ac  wrap" >
             {skills.map((i,ind) => {
               return (
                 <div className="allskilss" key={ind} >
@@ -134,7 +134,7 @@ gap: 20px;
   }
 
   .skcnt {
-    width: 80%;
+    width: 100%;
     height: 100%;
     /* display: flex; */
     /* flex-wrap: wrap; */
@@ -146,7 +146,7 @@ gap: 20px;
 
   .allskilss{
     flex: 1;
-    flex-basis: 400px;
+    flex-basis: 500px;
     width: 100%;
     /* max-width: 600px; */
     display: flex;

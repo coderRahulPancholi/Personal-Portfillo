@@ -46,10 +46,7 @@ function About() {
           <h4 style={{ fontSize: "20px" }}>Self Introduction</h4>
           <ul style={{ padding: "10px", fontSize: "15px" }}>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              sapiente quasi aliquam, magnam vitae doloremque itaque saepe,
-              maiores ut adipisci sint delectus. Dignissimos officia quod alias
-              impedit fugiat temporibus saepe?{" "}
+            My name is RAHUL SHARMA and I am a React developer. With my expertise in React, I specialize in creating responsive and dynamic web applications with seamless user interfaces.
             </p>
           </ul>
         </div>

@@ -18,11 +18,13 @@ function Section() {
           </h1>
 
           <p className="mydata">
-            A fornted devopler currently i am learning react js.
+            {/* A fornted devopler currently i am learning react js.
           
          
             I have created some beautifull website using it go trough my
-            projects section to see it.
+            projects section to see it. */}
+
+            I am passionate about creating intuitive and user-friendly interfaces that enhance the user experience. I am also dedicated to writing clean and maintainable code, ensuring that my applications are scalable and easy to manage.
           </p>
           
             <button

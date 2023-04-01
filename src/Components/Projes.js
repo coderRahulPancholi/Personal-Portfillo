@@ -39,10 +39,10 @@ export default function Projes(props) {
                   <h5>{i.name.toUpperCase()}</h5>
                   <div className="dis">
                     {/* <p><b>Tech Use:- </b>{i.technologyuse}</p> */}
-                    <span className="df  gap5 ">
-                      {" "}
+                    <span className="dfc   gap5 ">
+                      
                       <b>Discription:- </b>
-                      <p>{i.description}</p>
+                      <p>{i.description}  </p>
                     </span>
                     {/* <span className="df  gap5 ">  <p><b>Views:- </b>{i.watchers_count}</p></span>
                 <span className="df  gap5 "> <p><b>Star:- </b>{i.stargazers_count}</p></span>
@@ -114,7 +114,7 @@ const Items = styled.div`
 `;
 const Item = styled.div`
   flex: 1;
-  flex-basis: 400px;
+  flex-basis: 300px;
   /* width: 90%; */
   /* max-width: 800px; */
   height: 250px;
@@ -141,7 +141,12 @@ const Item = styled.div`
   }
 
   .dis {
+    width: 90%;
     max-width: 500px;
+    overflow: hidden;
+    
+
+    
   }
 
   .img {
@@ -173,9 +178,7 @@ const Item = styled.div`
       /* font-weight: 200; */
     }
 
-    .dis {
-      width: 90%;
-    }
+   
 
     .btns {
       width: 90%;
