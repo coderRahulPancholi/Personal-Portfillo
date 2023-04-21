@@ -30,12 +30,12 @@ export default function Projes(props) {
           {a.repo.sort((a,b)=> b.stargazers_count - a.stargazers_count).map((i, ind) => {
             return (
               <Item key={ind} className="df jsa as wrap gap10" >
-                <div className="img" style={{    backgroundImage: `url(https://raw.githubusercontent.com/coderRahulPancholi/${i.name}/main/demo.png)`}}>
+                {/* <div className="img" style={{    backgroundImage: `url(https://raw.githubusercontent.com/coderRahulPancholi/${i.name}/main/demo.png)`}}>
                 
                
                 
 
-              </div>
+              </div> */}
                 <div className="info dfc jss ac gap15">
                   <h5>{i.name.toUpperCase()}</h5>
                   <div className="dis">
@@ -143,8 +143,9 @@ overflow: hidden;
   }
 
   &:hover{
-    
-    .img{
+    transform: scale(1.05);
+    transition:0.2s;
+    /* .img{
       opacity: 10%;
       transition: 0.5s;
       transform: scale(1.2);
@@ -154,7 +155,7 @@ overflow: hidden;
     }
     .info{
       display: block;
-    }
+    } */
   }
 
 
@@ -185,7 +186,7 @@ overflow: hidden;
   }
 
   .info {
-    display: none;
+    
     width: 50%;
     flex: 1;
     flex-basis: 400px;
