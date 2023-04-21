@@ -4,7 +4,8 @@ import ProjectContaxt from "../Data/ProContaxt";
 // import  Projects  from "../Data/Projects";
 import { VscCode } from "react-icons/vsc";
 import { VscLink } from "react-icons/vsc";
-import { VscChevronDown } from "react-icons/vsc";
+
+// import { VscChevronDown } from "react-icons/vsc";
 
 export default function Projes(props) {
   const a = useContext(ProjectContaxt);
@@ -25,16 +26,16 @@ export default function Projes(props) {
             with their preview links
           </p>
         </div>
-        <Items className="df jss ac  wrap gap20">
-          {a.repo.map((i, ind) => {
+        <Items className="df jss ac  wrap gap20" >
+          {a.repo.sort((a,b)=> b.stargazers_count - a.stargazers_count).map((i, ind) => {
             return (
-              <Item key={ind} className="df jsa as wrap gap10">
-                {/* <div className="img">
-                <img src="https://avatars.githubusercontent.com/u/104254064?v=4" alt="porject Images" style={{opacity:props.mode==="dark"?"50%":"100%"}}/>
-                <img src={i.homepage} alt="porject Images" style={{opacity:props.mode==="dark"?"50%":"100%"}}/>
+              <Item key={ind} className="df jsa as wrap gap10" >
+                <div className="img" style={{    backgroundImage: `url(https://raw.githubusercontent.com/coderRahulPancholi/${i.name}/main/demo.png)`}}>
+                
+               
                 
 
-              </div> */}
+              </div>
                 <div className="info dfc jss ac gap15">
                   <h5>{i.name.toUpperCase()}</h5>
                   <div className="dis">
@@ -44,9 +45,9 @@ export default function Projes(props) {
                       <b>Discription:- </b>
                       <p>{i.description}  </p>
                     </span>
-                    {/* <span className="df  gap5 ">  <p><b>Views:- </b>{i.watchers_count}</p></span>
-                <span className="df  gap5 "> <p><b>Star:- </b>{i.stargazers_count}</p></span>
-               <span className="df  gap5 ">  <p><b>Date:- </b>{i.created_at}</p></span> */}
+                    {/* <span className="df  gap5 ">  <p><b>Views:- </b>{i.watchers_count}</p></span> */}
+                <span className="df  gap5 "> <p><b>Likes:- </b>{i.stargazers_count}</p></span>
+               {/* <span className="df  gap5 ">  <p><b>Date:- </b>{i.created_at}</p></span> */}
                   </div>
 
                   <div className="btns df ac jc">
@@ -74,13 +75,13 @@ export default function Projes(props) {
             );
           })}
         </Items>
-        {a.page === 5 ? (
+        {/* {a.page === 5 ? (
           <button className="morebtn dfc ac jc jsb" onClick={a.viewall}>
             View All <VscChevronDown />{" "}
           </button>
         ) : (
           ""
-        )}
+        )} */}
       </Maincontainer>
     </Wrapper>
   );
@@ -109,19 +110,23 @@ const Maincontainer = styled.div`
   width: 100%;
 `;
 const Items = styled.div`
-  width: 100%;
-  padding: 15px;
+  width: 85%;
+  /* padding: 15px; */
 `;
 const Item = styled.div`
   flex: 1;
-  flex-basis: 300px;
+  flex-basis: 250px;
   /* width: 90%; */
   /* max-width: 800px; */
+  position: relative;
   height: 250px;
   /* height:auto; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 15px;
   /* background-color: #2e3033; */
   background-color: ${({ theme }) => theme.color.bg3};
+
+overflow: hidden;
   padding: 1%;
   position: relative;
   transition: 0.2s;
@@ -136,9 +141,22 @@ const Item = styled.div`
       transform: scale(1);
     }
   }
-  &:hover {
-    transform: scale(1.03);
+
+  &:hover{
+    
+    .img{
+      opacity: 10%;
+      transition: 0.5s;
+      transform: scale(1.2);
+
+      
+    
+    }
+    .info{
+      display: block;
+    }
   }
+
 
   .dis {
     width: 90%;
@@ -150,23 +168,30 @@ const Item = styled.div`
   }
 
   .img {
-    flex: 1;
-    flex-basis: 400px;
+    
+   width: 100%;
     height: 100%;
+    z-index: 9;
+    position: absolute;
+    top: 0;
 
-    img {
-      width: 100%;
-      max-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
       border-radius: 10px;
-    }
+      transition: 0.5s;
+
+   
   }
 
   .info {
+    display: none;
     width: 50%;
     flex: 1;
     flex-basis: 400px;
     height: 100%;
     padding: 7px;
+    z-index: 9;
 
     h5 {
       /* text-align: center; */

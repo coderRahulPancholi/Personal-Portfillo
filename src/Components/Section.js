@@ -48,8 +48,8 @@ function Section() {
 const AWrapper = styled.section`
   width: 100%;
   /* height: 70%; */
-  /* height: calc(100vh - 70px); */
-  height: 100vh;
+  height: calc(100vh - 70px);
+  /* height: 100vh; */
   background-color: ${({ theme }) => theme.color.bg1};
 
   position: relative;

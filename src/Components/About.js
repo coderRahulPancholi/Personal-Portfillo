@@ -118,7 +118,7 @@ const Wrapper = styled.section`
       max-width: 400px;
       border-left: 3px solid #2854b0;
       overflow-x: hidden;
-      z-index: 99;
+      /* z-index: 99; */
 
       /* background-color: #252625; */
       background-color: ${({ theme }) => theme.color.bg3};

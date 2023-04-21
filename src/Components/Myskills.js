@@ -198,7 +198,7 @@ align-items: center;
 
         .ani{
           height: 100%;
-          /* width: 10%; */
+          width: 100%;
           /* background-color: white; */
           background: linear-gradient(to right, transparent 20%, #ffffff 94%);
           /* border: 1px solid white; */
@@ -206,12 +206,12 @@ align-items: center;
       /* border-bottom-right-radius: 5px; */
       opacity: 25%;
      
-      animation: identifier 5s ease-out  infinite  ;
+      animation: identifier 3s ease-out  infinite  ;
       
 
       @keyframes identifier {
         from{
-          width: 0;
+          width: 0%;
            
         }
         to{
